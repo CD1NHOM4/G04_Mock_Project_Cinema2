@@ -20,6 +20,9 @@
 		054637111EE7122F00947845 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 054637101EE7122F00947845 /* LoginViewController.swift */; };
 		054637131EE7124900947845 /* RegisterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 054637121EE7124900947845 /* RegisterViewController.swift */; };
 		05B4FC011EE7199C00E68BD4 /* Validate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05B4FC001EE7199C00E68BD4 /* Validate.swift */; };
+		05B4FC031EE71B0E00E68BD4 /* ChangePasssViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05B4FC021EE71B0E00E68BD4 /* ChangePasssViewController.swift */; };
+		05B4FC051EE71B2100E68BD4 /* Dowloader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05B4FC041EE71B2100E68BD4 /* Dowloader.swift */; };
+		05B4FC071EE71B3C00E68BD4 /* ForgotViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05B4FC061EE71B3C00E68BD4 /* ForgotViewController.swift */; };
 		19439E197AFEF11C2B1E570F /* Pods_G04_Mock_Project_Cinema.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 25B23F4955EB62218B76107C /* Pods_G04_Mock_Project_Cinema.framework */; };
 		19EB39EA6B69BA3A6157464B /* Pods_G04_Mock_Project_CinemaTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BAA041DF930991957DF77983 /* Pods_G04_Mock_Project_CinemaTests.framework */; };
 		BF1E83F45A388DA92C5212BD /* Pods_G04_Mock_Project_CinemaUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FFEDD4D336BB119696FC9754 /* Pods_G04_Mock_Project_CinemaUITests.framework */; };
@@ -62,6 +65,9 @@
 		054637101EE7122F00947845 /* LoginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		054637121EE7124900947845 /* RegisterViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RegisterViewController.swift; sourceTree = "<group>"; };
 		05B4FC001EE7199C00E68BD4 /* Validate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Validate.swift; sourceTree = "<group>"; };
+		05B4FC021EE71B0E00E68BD4 /* ChangePasssViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ChangePasssViewController.swift; sourceTree = "<group>"; };
+		05B4FC041EE71B2100E68BD4 /* Dowloader.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Dowloader.swift; sourceTree = "<group>"; };
+		05B4FC061EE71B3C00E68BD4 /* ForgotViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ForgotViewController.swift; sourceTree = "<group>"; };
 		25B23F4955EB62218B76107C /* Pods_G04_Mock_Project_Cinema.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_G04_Mock_Project_Cinema.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		3A1D1B9D12CFD8F8F0BE85BE /* Pods-G04_Mock_Project_CinemaUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-G04_Mock_Project_CinemaUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-G04_Mock_Project_CinemaUITests/Pods-G04_Mock_Project_CinemaUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		3CF1EE960E72564650328699 /* Pods-G04_Mock_Project_CinemaTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-G04_Mock_Project_CinemaTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-G04_Mock_Project_CinemaTests/Pods-G04_Mock_Project_CinemaTests.release.xcconfig"; sourceTree = "<group>"; };
@@ -171,6 +177,8 @@
 		0546370A1EE711B200947845 /* Controller */ = {
 			isa = PBXGroup;
 			children = (
+				05B4FC021EE71B0E00E68BD4 /* ChangePasssViewController.swift */,
+				05B4FC061EE71B3C00E68BD4 /* ForgotViewController.swift */,
 				054637121EE7124900947845 /* RegisterViewController.swift */,
 				054637101EE7122F00947845 /* LoginViewController.swift */,
 			);
@@ -187,6 +195,7 @@
 		05B4FBFF1EE7194D00E68BD4 /* Utilities */ = {
 			isa = PBXGroup;
 			children = (
+				05B4FC041EE71B2100E68BD4 /* Dowloader.swift */,
 				05B4FC001EE7199C00E68BD4 /* Validate.swift */,
 			);
 			name = Utilities;
@@ -498,11 +507,14 @@
 			buildActionMask = 2147483647;
 			files = (
 				0546370F1EE7121E00947845 /* UserProfile.swift in Sources */,
+				05B4FC031EE71B0E00E68BD4 /* ChangePasssViewController.swift in Sources */,
 				0546370D1EE711FA00947845 /* Acount.swift in Sources */,
+				05B4FC071EE71B3C00E68BD4 /* ForgotViewController.swift in Sources */,
 				05B4FC011EE7199C00E68BD4 /* Validate.swift in Sources */,
 				054636DC1EE70FAB00947845 /* ViewController.swift in Sources */,
 				054637131EE7124900947845 /* RegisterViewController.swift in Sources */,
 				054637111EE7122F00947845 /* LoginViewController.swift in Sources */,
+				05B4FC051EE71B2100E68BD4 /* Dowloader.swift in Sources */,
 				054636DA1EE70FAB00947845 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
