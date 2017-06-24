@@ -60,7 +60,7 @@ class LogInViewController: UIViewController, UITextFieldDelegate {
                     //Ẩn progress
                     self.hideProgress()
                     if (error == nil) {
-                        let srcUserInfo = self.storyboard?.instantiateViewController(withIdentifier: "userInfoId") as! UserInfoViewController
+                        let srcUserInfo = self.storyboard?.instantiateViewController(withIdentifier: "userProfileId") as! UserProfileViewController
                         self.present(srcUserInfo, animated: true)
                     }
                     else {

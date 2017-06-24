@@ -13,19 +13,20 @@ import MBProgressHUD
 
 class ChangePassViewController: UIViewController {
     
+    
     @IBOutlet weak var txtfOldPass: UITextField!
     @IBOutlet weak var txtfNewPass: UITextField!
     @IBOutlet weak var txtfConfirmPass: UITextField!
     
-    var user: User! = nil
+    var user: UserProfile! = nil
     var loadingNotification: MBProgressHUD! = nil
-    var mDatabase: DatabaseReference!
+    var rfDatabase: DatabaseReference!
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
         // Do any additional setup after loading the view.
-        mDatabase = Database.database().reference()
+        rfDatabase = Database.database().reference()
         
         let dismiss: UITapGestureRecognizer = UITapGestureRecognizer(target: self, action: #selector(LogInViewController.DismissKeyboard))
         view.addGestureRecognizer(dismiss)
@@ -44,48 +45,52 @@ class ChangePassViewController: UIViewController {
     
     
     @IBAction func btnChangePass_Act(_ sender: Any) {
-        let currentPass: String = txtfOldPass.text!
+        var oldPass: String = txtfOldPass.text!
         let newPass: String = txtfNewPass.text!
         let confirmPass: String = txtfConfirmPass.text!
         
-        if (currentPass.isEmpty || newPass.isEmpty || confirmPass.isEmpty) {
+        if (oldPass.isEmpty || newPass.isEmpty || confirmPass.isEmpty) {
             showAlertDialog(message: "Bạn cần điền đầy đủ thông tin")
         }
         else {
-            var result: Bool = true;
+            var isAcount: Bool = true;
             //Kiểm Tra độ dài
-            if (currentPass.characters.count < 6 || newPass.characters.count < 6 || confirmPass.characters.count < 6){
-                result = false;
+            if (oldPass.characters.count < 6 || newPass.characters.count < 6 || confirmPass.characters.count < 6){
+                isAcount = false;
                 showAlertDialog(message: "Mật khẩu phải có ít nhất 6 kí tự");
                 return;
             }
             //Kiểm tra Pass hiện tại có đúng
-            if (user.password != currentPass) {
-                result = false
-                showAlertDialog(message: "Mật khẩu không hợp lệ");
+            var t = user.password
+            if (t != oldPass) {
+                isAcount = false
+                showAlertDialog(message: "Mật khẩu không hợp lệ1");
                 return ;
             }
             
             if (newPass != confirmPass) {
-                result = false;
+                isAcount = false;
                 showAlertDialog(message: "Mật khẩu không trùng khớp");
                 return ;
             }
             
-            if (result) {
+            if (isAcount) {
                 self.showProgress()
                 //Thay đổi Pass
                 Auth.auth().currentUser?.updatePassword(to: newPass) { (error) in
                     self.hideProgress()
-                    if error == nil {
+                    
+                    if error == nil
+                    {
                         //Cập nhật Pass mới
                         let dataUpdatePass = ["password": newPass];
-                        self.mDatabase.child("users").child(self.getUid()).updateChildValues(dataUpdatePass)
+                        self.rfDatabase.child("Acount").child(self.getUid()).updateChildValues(dataUpdatePass)
                         //Hiện Cảnh Báo
                         let alertView = UIAlertController(title: "Thông Báo", message: "Đổi mật khẩu thành công", preferredStyle: .alert)
-                        let action = UIAlertAction(title: "Ok", style: .default, handler: { (action: UIAlertAction) in
+                        let action = UIAlertAction(title: "OK", style: .default, handler: { (action: UIAlertAction) in
                             self.dismiss(animated: true, completion: nil)
                         })
+                        //
                         alertView.addAction(action)
                         self.present(alertView, animated: true, completion: nil)
                         

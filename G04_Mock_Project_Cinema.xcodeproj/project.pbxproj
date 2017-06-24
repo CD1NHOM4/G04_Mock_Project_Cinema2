@@ -8,21 +8,34 @@
 
 /* Begin PBXBuildFile section */
 		054636DA1EE70FAB00947845 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 054636D91EE70FAB00947845 /* AppDelegate.swift */; };
-		054636DC1EE70FAB00947845 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 054636DB1EE70FAB00947845 /* ViewController.swift */; };
 		054636DF1EE70FAB00947845 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 054636DD1EE70FAB00947845 /* Main.storyboard */; };
 		054636E11EE70FAB00947845 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 054636E01EE70FAB00947845 /* Assets.xcassets */; };
 		054636E41EE70FAB00947845 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 054636E21EE70FAB00947845 /* LaunchScreen.storyboard */; };
 		054636EF1EE70FAC00947845 /* G04_Mock_Project_CinemaTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 054636EE1EE70FAC00947845 /* G04_Mock_Project_CinemaTests.swift */; };
 		054636FA1EE70FAC00947845 /* G04_Mock_Project_CinemaUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 054636F91EE70FAC00947845 /* G04_Mock_Project_CinemaUITests.swift */; };
-		054637081EE7110F00947845 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 054637071EE7110F00947845 /* GoogleService-Info.plist */; };
-		0546370D1EE711FA00947845 /* Acount.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0546370C1EE711FA00947845 /* Acount.swift */; };
 		0546370F1EE7121E00947845 /* UserProfile.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0546370E1EE7121E00947845 /* UserProfile.swift */; };
 		054637111EE7122F00947845 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 054637101EE7122F00947845 /* LoginViewController.swift */; };
 		054637131EE7124900947845 /* RegisterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 054637121EE7124900947845 /* RegisterViewController.swift */; };
+		058A8F341EE81AD900FF1418 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 058A8F331EE81AD900FF1418 /* ViewController.swift */; };
+		058A8F361EE830B400FF1418 /* TableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 058A8F351EE830B400FF1418 /* TableViewController.swift */; };
 		05B4FC011EE7199C00E68BD4 /* Validate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05B4FC001EE7199C00E68BD4 /* Validate.swift */; };
 		05B4FC031EE71B0E00E68BD4 /* ChangePasssViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05B4FC021EE71B0E00E68BD4 /* ChangePasssViewController.swift */; };
 		05B4FC051EE71B2100E68BD4 /* Dowloader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05B4FC041EE71B2100E68BD4 /* Dowloader.swift */; };
 		05B4FC071EE71B3C00E68BD4 /* ForgotViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05B4FC061EE71B3C00E68BD4 /* ForgotViewController.swift */; };
+		05B4FC0B1EE72F6800E68BD4 /* UserProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05B4FC0A1EE72F6800E68BD4 /* UserProfileViewController.swift */; };
+		05B4FC0D1EE72FB400E68BD4 /* Acount.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05B4FC0C1EE72FB400E68BD4 /* Acount.swift */; };
+		05B4FC0F1EE7B7F000E68BD4 /* CustomTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05B4FC0E1EE7B7F000E68BD4 /* CustomTabBarController.swift */; };
+		05B4FC111EE7C19E00E68BD4 /* SapChieuViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05B4FC101EE7C19E00E68BD4 /* SapChieuViewController.swift */; };
+		05B4FC131EE7C2C000E68BD4 /* MovieDetail.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05B4FC121EE7C2BF00E68BD4 /* MovieDetail.swift */; };
+		05B4FC151EE7C6EF00E68BD4 /* Seat.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05B4FC141EE7C6EF00E68BD4 /* Seat.swift */; };
+		05B4FC171EE7C70900E68BD4 /* ShowTime.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05B4FC161EE7C70900E68BD4 /* ShowTime.swift */; };
+		05B4FC191EE7C71200E68BD4 /* ShowTimeInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05B4FC181EE7C71200E68BD4 /* ShowTimeInfo.swift */; };
+		05B4FC1D1EE7C8A300E68BD4 /* FilmInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05B4FC1C1EE7C8A300E68BD4 /* FilmInfo.swift */; };
+		05B4FC201EE7C8CD00E68BD4 /* DesignTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05B4FC1E1EE7C8CD00E68BD4 /* DesignTableViewCell.swift */; };
+		05B4FC211EE7C8CD00E68BD4 /* DesignTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 05B4FC1F1EE7C8CD00E68BD4 /* DesignTableViewCell.xib */; };
+		05B4FC231EE7CA5800E68BD4 /* LoginTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05B4FC221EE7CA5800E68BD4 /* LoginTextField.swift */; };
+		05B4FC251EE7CE4000E68BD4 /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 05B4FC241EE7CE4000E68BD4 /* Info.plist */; };
+		05B4FC271EE7DC8000E68BD4 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 05B4FC261EE7DC8000E68BD4 /* GoogleService-Info.plist */; };
 		19439E197AFEF11C2B1E570F /* Pods_G04_Mock_Project_Cinema.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 25B23F4955EB62218B76107C /* Pods_G04_Mock_Project_Cinema.framework */; };
 		19EB39EA6B69BA3A6157464B /* Pods_G04_Mock_Project_CinemaTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BAA041DF930991957DF77983 /* Pods_G04_Mock_Project_CinemaTests.framework */; };
 		BF1E83F45A388DA92C5212BD /* Pods_G04_Mock_Project_CinemaUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FFEDD4D336BB119696FC9754 /* Pods_G04_Mock_Project_CinemaUITests.framework */; };
@@ -48,26 +61,38 @@
 /* Begin PBXFileReference section */
 		054636D61EE70FAB00947845 /* G04_Mock_Project_Cinema.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = G04_Mock_Project_Cinema.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		054636D91EE70FAB00947845 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		054636DB1EE70FAB00947845 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		054636DE1EE70FAB00947845 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		054636E01EE70FAB00947845 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		054636E31EE70FAB00947845 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
-		054636E51EE70FAB00947845 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		054636EA1EE70FAC00947845 /* G04_Mock_Project_CinemaTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = G04_Mock_Project_CinemaTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		054636EE1EE70FAC00947845 /* G04_Mock_Project_CinemaTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = G04_Mock_Project_CinemaTests.swift; sourceTree = "<group>"; };
 		054636F01EE70FAC00947845 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		054636F51EE70FAC00947845 /* G04_Mock_Project_CinemaUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = G04_Mock_Project_CinemaUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		054636F91EE70FAC00947845 /* G04_Mock_Project_CinemaUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = G04_Mock_Project_CinemaUITests.swift; sourceTree = "<group>"; };
 		054636FB1EE70FAC00947845 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		054637071EE7110F00947845 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
-		0546370C1EE711FA00947845 /* Acount.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Acount.swift; sourceTree = "<group>"; };
 		0546370E1EE7121E00947845 /* UserProfile.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserProfile.swift; sourceTree = "<group>"; };
 		054637101EE7122F00947845 /* LoginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		054637121EE7124900947845 /* RegisterViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RegisterViewController.swift; sourceTree = "<group>"; };
+		058A8F331EE81AD900FF1418 /* ViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ViewController.swift; path = ../ViewController.swift; sourceTree = "<group>"; };
+		058A8F351EE830B400FF1418 /* TableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TableViewController.swift; sourceTree = "<group>"; };
 		05B4FC001EE7199C00E68BD4 /* Validate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Validate.swift; sourceTree = "<group>"; };
 		05B4FC021EE71B0E00E68BD4 /* ChangePasssViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ChangePasssViewController.swift; sourceTree = "<group>"; };
 		05B4FC041EE71B2100E68BD4 /* Dowloader.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Dowloader.swift; sourceTree = "<group>"; };
 		05B4FC061EE71B3C00E68BD4 /* ForgotViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ForgotViewController.swift; sourceTree = "<group>"; };
+		05B4FC0A1EE72F6800E68BD4 /* UserProfileViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserProfileViewController.swift; sourceTree = "<group>"; };
+		05B4FC0C1EE72FB400E68BD4 /* Acount.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Acount.swift; sourceTree = "<group>"; };
+		05B4FC0E1EE7B7F000E68BD4 /* CustomTabBarController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomTabBarController.swift; sourceTree = "<group>"; };
+		05B4FC101EE7C19E00E68BD4 /* SapChieuViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SapChieuViewController.swift; sourceTree = "<group>"; };
+		05B4FC121EE7C2BF00E68BD4 /* MovieDetail.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MovieDetail.swift; sourceTree = "<group>"; };
+		05B4FC141EE7C6EF00E68BD4 /* Seat.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Seat.swift; sourceTree = "<group>"; };
+		05B4FC161EE7C70900E68BD4 /* ShowTime.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ShowTime.swift; sourceTree = "<group>"; };
+		05B4FC181EE7C71200E68BD4 /* ShowTimeInfo.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ShowTimeInfo.swift; sourceTree = "<group>"; };
+		05B4FC1C1EE7C8A300E68BD4 /* FilmInfo.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FilmInfo.swift; sourceTree = "<group>"; };
+		05B4FC1E1EE7C8CD00E68BD4 /* DesignTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DesignTableViewCell.swift; sourceTree = "<group>"; };
+		05B4FC1F1EE7C8CD00E68BD4 /* DesignTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = DesignTableViewCell.xib; sourceTree = "<group>"; };
+		05B4FC221EE7CA5800E68BD4 /* LoginTextField.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginTextField.swift; sourceTree = "<group>"; };
+		05B4FC241EE7CE4000E68BD4 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		05B4FC261EE7DC8000E68BD4 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		25B23F4955EB62218B76107C /* Pods_G04_Mock_Project_Cinema.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_G04_Mock_Project_Cinema.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		3A1D1B9D12CFD8F8F0BE85BE /* Pods-G04_Mock_Project_CinemaUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-G04_Mock_Project_CinemaUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-G04_Mock_Project_CinemaUITests/Pods-G04_Mock_Project_CinemaUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		3CF1EE960E72564650328699 /* Pods-G04_Mock_Project_CinemaTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-G04_Mock_Project_CinemaTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-G04_Mock_Project_CinemaTests/Pods-G04_Mock_Project_CinemaTests.release.xcconfig"; sourceTree = "<group>"; };
@@ -137,12 +162,11 @@
 				0546370A1EE711B200947845 /* Controller */,
 				054637091EE711A700947845 /* Model */,
 				054636D91EE70FAB00947845 /* AppDelegate.swift */,
-				054636DB1EE70FAB00947845 /* ViewController.swift */,
 				054636DD1EE70FAB00947845 /* Main.storyboard */,
 				054636E01EE70FAB00947845 /* Assets.xcassets */,
 				054636E21EE70FAB00947845 /* LaunchScreen.storyboard */,
-				054636E51EE70FAB00947845 /* Info.plist */,
-				054637071EE7110F00947845 /* GoogleService-Info.plist */,
+				05B4FC261EE7DC8000E68BD4 /* GoogleService-Info.plist */,
+				05B4FC241EE7CE4000E68BD4 /* Info.plist */,
 			);
 			path = G04_Mock_Project_Cinema;
 			sourceTree = "<group>";
@@ -169,7 +193,12 @@
 			isa = PBXGroup;
 			children = (
 				0546370E1EE7121E00947845 /* UserProfile.swift */,
-				0546370C1EE711FA00947845 /* Acount.swift */,
+				05B4FC1C1EE7C8A300E68BD4 /* FilmInfo.swift */,
+				05B4FC141EE7C6EF00E68BD4 /* Seat.swift */,
+				05B4FC181EE7C71200E68BD4 /* ShowTimeInfo.swift */,
+				05B4FC161EE7C70900E68BD4 /* ShowTime.swift */,
+				05B4FC0C1EE72FB400E68BD4 /* Acount.swift */,
+				05B4FC121EE7C2BF00E68BD4 /* MovieDetail.swift */,
 			);
 			name = Model;
 			sourceTree = "<group>";
@@ -179,8 +208,12 @@
 			children = (
 				05B4FC021EE71B0E00E68BD4 /* ChangePasssViewController.swift */,
 				05B4FC061EE71B3C00E68BD4 /* ForgotViewController.swift */,
+				058A8F331EE81AD900FF1418 /* ViewController.swift */,
 				054637121EE7124900947845 /* RegisterViewController.swift */,
 				054637101EE7122F00947845 /* LoginViewController.swift */,
+				05B4FC0A1EE72F6800E68BD4 /* UserProfileViewController.swift */,
+				05B4FC101EE7C19E00E68BD4 /* SapChieuViewController.swift */,
+				058A8F351EE830B400FF1418 /* TableViewController.swift */,
 			);
 			name = Controller;
 			sourceTree = "<group>";
@@ -188,6 +221,10 @@
 		0546370B1EE711CC00947845 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				05B4FC1E1EE7C8CD00E68BD4 /* DesignTableViewCell.swift */,
+				05B4FC221EE7CA5800E68BD4 /* LoginTextField.swift */,
+				05B4FC1F1EE7C8CD00E68BD4 /* DesignTableViewCell.xib */,
+				05B4FC0E1EE7B7F000E68BD4 /* CustomTabBarController.swift */,
 			);
 			name = View;
 			sourceTree = "<group>";
@@ -341,9 +378,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				054636E41EE70FAB00947845 /* LaunchScreen.storyboard in Resources */,
-				054637081EE7110F00947845 /* GoogleService-Info.plist in Resources */,
+				05B4FC251EE7CE4000E68BD4 /* Info.plist in Resources */,
 				054636E11EE70FAB00947845 /* Assets.xcassets in Resources */,
 				054636DF1EE70FAB00947845 /* Main.storyboard in Resources */,
+				05B4FC211EE7C8CD00E68BD4 /* DesignTableViewCell.xib in Resources */,
+				05B4FC271EE7DC8000E68BD4 /* GoogleService-Info.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -507,14 +546,25 @@
 			buildActionMask = 2147483647;
 			files = (
 				0546370F1EE7121E00947845 /* UserProfile.swift in Sources */,
+				05B4FC131EE7C2C000E68BD4 /* MovieDetail.swift in Sources */,
+				05B4FC111EE7C19E00E68BD4 /* SapChieuViewController.swift in Sources */,
 				05B4FC031EE71B0E00E68BD4 /* ChangePasssViewController.swift in Sources */,
-				0546370D1EE711FA00947845 /* Acount.swift in Sources */,
+				05B4FC0F1EE7B7F000E68BD4 /* CustomTabBarController.swift in Sources */,
 				05B4FC071EE71B3C00E68BD4 /* ForgotViewController.swift in Sources */,
+				05B4FC1D1EE7C8A300E68BD4 /* FilmInfo.swift in Sources */,
 				05B4FC011EE7199C00E68BD4 /* Validate.swift in Sources */,
-				054636DC1EE70FAB00947845 /* ViewController.swift in Sources */,
+				05B4FC231EE7CA5800E68BD4 /* LoginTextField.swift in Sources */,
+				05B4FC151EE7C6EF00E68BD4 /* Seat.swift in Sources */,
+				05B4FC191EE7C71200E68BD4 /* ShowTimeInfo.swift in Sources */,
+				05B4FC171EE7C70900E68BD4 /* ShowTime.swift in Sources */,
+				05B4FC201EE7C8CD00E68BD4 /* DesignTableViewCell.swift in Sources */,
 				054637131EE7124900947845 /* RegisterViewController.swift in Sources */,
 				054637111EE7122F00947845 /* LoginViewController.swift in Sources */,
 				05B4FC051EE71B2100E68BD4 /* Dowloader.swift in Sources */,
+				058A8F361EE830B400FF1418 /* TableViewController.swift in Sources */,
+				05B4FC0D1EE72FB400E68BD4 /* Acount.swift in Sources */,
+				058A8F341EE81AD900FF1418 /* ViewController.swift in Sources */,
+				05B4FC0B1EE72F6800E68BD4 /* UserProfileViewController.swift in Sources */,
 				054636DA1EE70FAB00947845 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

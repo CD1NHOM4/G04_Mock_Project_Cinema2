@@ -88,7 +88,7 @@ class RegisterViewController: UIViewController, UITextFieldDelegate {
                         self.mDatabase.child("users").child((user?.uid)!).updateChildValues(dataUser)
                         
                         //Chuẩn bị trước khi chuyển qua Màn hình user Profile
-                        let srcUserInfo = self.storyboard?.instantiateViewController(withIdentifier: "userInfoId") as! UserInfoViewController
+                        let srcUserInfo = self.storyboard?.instantiateViewController(withIdentifier: "userInfoId") as! UserProfileViewController
                         self.present(srcUserInfo, animated: true)
                     } else {
                         if let errCode = AuthErrorCode(rawValue: error!._code) {

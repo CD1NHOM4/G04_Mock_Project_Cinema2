@@ -8,18 +8,30 @@
 
 import UIKit
 
-class ViewController: UIViewController {
+import Firebase
 
+class ViewController: UIViewController{//, UITableViewDelegate, UITableViewDataSource {
+    @IBOutlet var shownButton: UIButton!
+    @IBOutlet var nowShowingButton: UIButton!
+    @IBOutlet var comingSoonButton: UIButton!
+    
+    @IBOutlet var movieTableView: UITableView!
+    //var movies = [Movie]()
+   // var moviesClass = [Movie]()
+    var posterImage: [Int:UIImage] = [:]
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view, typically from a nib.
+       // self.movieTableView.dataSource = self
+        //self.movieTableView.delegate = self
+       // getMoviesList()
+        // getNowShowingMovies()
     }
-
+    
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
     }
-
+    
 
 }
 

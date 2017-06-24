@@ -4,9 +4,10 @@
 //
 //  Created by THANH on 6/6/17.
 //  Copyright © 2017 HCMUTE. All rights reserved.
-//
+//IT.G04-Mock-Project-Cinema
 
 import UIKit
+import Firebase
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
@@ -16,6 +17,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
+         FirebaseApp.configure()
         return true
     }
 
