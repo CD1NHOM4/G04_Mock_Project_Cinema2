@@ -15,7 +15,7 @@ class CustomTabBarController: UITabBarController {
     override func viewDidLoad() {
         super.viewDidLoad()
         // I've added this line to viewDidLoad
-        UIApplication.shared.statusBarFrame.size.height
-        financialTabBar.frame = CGRect(x: 0, y:  financialTabBar.frame.size.height, width: financialTabBar.frame.size.width, height: financialTabBar.frame.size.height)
+        //UIApplication.shared.statusBarFrame.size.height
+//        financialTabBar.frame = CGRect(x: 0, y:  financialTabBar.frame.size.height, width: financialTabBar.frame.size.width, height: financialTabBar.frame.size.height)
 }
 }

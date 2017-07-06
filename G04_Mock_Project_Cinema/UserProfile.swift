@@ -18,9 +18,10 @@ class UserProfile: NSObject {
     var score: Double
     var password: String
     var phone: String
+    var balance: Double
     //Khởi tạo
     init(userid: String, fullName: String, email: String, address: String, score: Double,
-         password: String, phone: String) {
+         password: String, phone: String, balance: Double) {
         
         self.userid = userid
         self.fullName = fullName
@@ -29,11 +30,13 @@ class UserProfile: NSObject {
         self.score = score
         self.password = password
         self.phone = phone
+        self.balance = balance
+
         
     }
     //
     convenience override init() {
         self.init(userid: "", fullName: "",email: "", address: "", score: 0, password: "",
-                  phone: "")
+                  phone: "", balance: 0)
     }
 }

@@ -8,7 +8,7 @@
 
 import UIKit
 
-class ForgetPassViewController: UIViewController {
+class ForgotPassViewController: UIViewController {
     
     @IBOutlet weak var txtEmailRegistered: UITextField!
     override func viewDidLoad() {

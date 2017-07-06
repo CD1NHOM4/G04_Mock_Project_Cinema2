@@ -68,7 +68,7 @@ class Validate {
 
 extension String {
     
-    //To check text field or String is blank or not
+    //Kiểm tra text Field hoặc String có rỗng hay không
     var isBlank: Bool {
         get {
             let trimmed = trimmingCharacters(in: CharacterSet.whitespaces)

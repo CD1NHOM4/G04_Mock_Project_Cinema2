@@ -59,21 +59,21 @@ class ViewController: UIViewController,UITableViewDataSource,UITabBarDelegate{
     //=============
     func getAllMoviesCommningSoon() {
         rfDatabase.child("films").child("commingSoon").child("filmInfo").observe(.childAdded, with: { (snapshot) -> Void in
-            var film: [String: AnyObject] = (snapshot.value as? [String: AnyObject])!
-            var filmInfo = film["filmInfo"] as? [String: AnyObject]
-            //get data filmInfo
-            let actor: String = filmInfo!["actor"] as? String ?? ""
-            let content: String = filmInfo!["content"] as? String ?? ""
-            let director: String = filmInfo!["director"] as? String ?? ""
-            let duration: Int = filmInfo?["duration"] as? Int ?? 0
-            let filmId: String = filmInfo!["filmId"] as? String ?? ""
-            let filmName: String = filmInfo!["filmName"] as? String ?? ""
-            let openningDay: String = filmInfo!["openningDay"] as? String ?? ""
-            let posterUrl: String = filmInfo!["posterUrl"] as? String ?? ""
-            let type: String = filmInfo!["type"] as? String ?? ""
-            let videoUrl: String = filmInfo!["videoUrl"] as? String ?? ""
-            
-            let filmInfoData: FilmInfo  = FilmInfo.init(actor: actor, content: content, director: director, duration: duration, filmId: filmId, filmName: filmName, openningDay: openningDay, posterUrl: posterUrl, type: type, videoUrl: videoUrl)
+//            var film: [String: AnyObject] = (snapshot.value as? [String: AnyObject])!
+//            var filmInfo = film["filmInfo"] as? [String: AnyObject]
+//            //get data filmInfo
+//            let actor: String = filmInfo!["actor"] as? String ?? ""
+//            let content: String = filmInfo!["content"] as? String ?? ""
+//            let director: String = filmInfo!["director"] as? String ?? ""
+//            let duration: Int = filmInfo?["duration"] as? Int ?? 0
+//            let filmId: String = filmInfo!["filmId"] as? String ?? ""
+//            let filmName: String = filmInfo!["filmName"] as? String ?? ""
+//            let openningDay: String = filmInfo!["openningDay"] as? String ?? ""
+//            let posterUrl: String = filmInfo!["posterUrl"] as? String ?? ""
+//            let type: String = filmInfo!["type"] as? String ?? ""
+//            let videoUrl: String = filmInfo!["videoUrl"] as? String ?? ""
+//            
+//            let filmInfoData: FilmInfo  = FilmInfo.init(actor: actor, content: content, director: director, duration: duration, filmId: filmId, filmName: filmName, filmType: <#String#>, openningDay: openningDay, posterUrl: posterUrl, type: type, videoUrl: videoUrl)
            // self.films.append(filmInfoData)
             //show into main thread
           //  DispatchQueue.main.async {

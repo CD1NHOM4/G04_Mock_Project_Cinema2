@@ -37,7 +37,7 @@ class LogInViewController: UIViewController, UITextFieldDelegate {
     }
     //Ẩn Progress
     func hideProgress() {
-       loadingNotification.hide(animated: true)
+        loadingNotification.hide(animated: true)
     }
     //Xử lí sự kiện khi nhấn btnLogin
     @IBAction func btnLogin_Act(_ sender: Any) {

@@ -1,9 +1,9 @@
 //
-//  ShowTimeUnfo.swift
-//  HotMovies_UTE
+//  ViewController.swift
+//  G04_Mock_Project_Cinema
 //
-//  Created by Cntt03 on 6/3/17.
-//  Copyright © 2017 Kiet Nguyen. All rights reserved.
+//  Created by THANH on 6/7/17.
+//  Copyright © 2017 HCMUTE. All rights reserved.
 //
 
 import Foundation

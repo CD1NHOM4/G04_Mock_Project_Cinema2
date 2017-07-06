@@ -11,8 +11,6 @@ import Firebase
 import MBProgressHUD
 
 class RegisterViewController: UIViewController, UITextFieldDelegate {
-    
-    @IBOutlet weak var gh: UITextField!
     @IBOutlet weak var txtFFullName: UITextField!
     @IBOutlet weak var txtFEmail: UITextField!
     @IBOutlet weak var txtFPass: UITextField!
@@ -29,8 +27,7 @@ class RegisterViewController: UIViewController, UITextFieldDelegate {
         let dismiss: UITapGestureRecognizer = UITapGestureRecognizer(target: self, action: #selector(LogInViewController.DismissKeyboard))
         view.addGestureRecognizer(dismiss)
         observerKeyboard()
-
-        // Do any additional setup after loading the view.
+        // Gọi tham chiếu đến Database trên FireBase
         mDatabase = Database.database().reference()
     }
     
@@ -82,13 +79,13 @@ class RegisterViewController: UIViewController, UITextFieldDelegate {
                             "phone": phone,
                             "address": address,
                             "password": password,
-                            "score": 200000,
-                            "fullName": fullName
+                            "score": 200,
+                            "balance": 200000,                       "fullName": fullName
                             ] as [String : Any]
-                        self.mDatabase.child("users").child((user?.uid)!).updateChildValues(dataUser)
+                        self.mDatabase.child("Acount").child((user?.uid)!).updateChildValues(dataUser)
                         
                         //Chuẩn bị trước khi chuyển qua Màn hình user Profile
-                        let srcUserInfo = self.storyboard?.instantiateViewController(withIdentifier: "userInfoId") as! UserProfileViewController
+                        let srcUserInfo = self.storyboard?.instantiateViewController(withIdentifier: "userProfileId") as! UserProfileViewController
                         self.present(srcUserInfo, animated: true)
                     } else {
                         if let errCode = AuthErrorCode(rawValue: error!._code) {

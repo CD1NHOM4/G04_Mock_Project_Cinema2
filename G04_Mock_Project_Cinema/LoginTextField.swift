@@ -1,39 +1,39 @@
 //
-//  LoginTextField.swift
-//  HotMovies_UTE
+//  LogInTextField.swift
+//  G04_Mock_Project_Cinema
 //
-//  Created by Kiet Nguyen on 5/27/17.
-//  Copyright © 2017 Kiet Nguyen. All rights reserved.
+//  Created by THANH on 7/6/17.
+//  Copyright © 2017 HCMUTE. All rights reserved.
 //
 
 import UIKit
 
-@IBDesignable
-class LoginTextField: UITextField {
-
+@IBDesignable class LogInTextField: UITextField {
+    
+    //Set độ cong viền cho TextField
     @IBInspectable var cornerRadius: CGFloat = 0{
         didSet{
             layer.cornerRadius = cornerRadius
         }
     }
-    
+    //Set ảnh bên trái cho TextField
     @IBInspectable var leftImage: UIImage?{
         didSet {
             updateView()
         }
     }
-    
+    //
     @IBInspectable var leftPadding: CGFloat = 0{
         didSet{
             updateView()
         }
     }
-    
+    //Hàm update View
     func updateView(){
         if let image = leftImage{
             leftViewMode = .always
             
-            let imageView = UIImageView(frame: CGRect(x: leftPadding, y: 0, width: 25, height: 25))
+            let imageView = UIImageView(frame: CGRect(x: leftPadding, y: 0, width: 27, height: 27))
             
             imageView.image = image
             imageView.tintColor = tintColor
@@ -48,12 +48,12 @@ class LoginTextField: UITextField {
             view.addSubview(imageView)
             leftView = view
         } else{
-            //image is nill
+            //Nếu Ảnh nil
             leftViewMode = .never
         }
-        
+        //
         attributedPlaceholder = NSAttributedString(string: placeholder != nil ? placeholder!: "", attributes: [NSForegroundColorAttributeName: tintColor])
-        
     }
-
+    
 }
+

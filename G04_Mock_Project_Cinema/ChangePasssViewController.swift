@@ -12,8 +12,7 @@ import MBProgressHUD
 
 
 class ChangePassViewController: UIViewController {
-    
-    
+
     @IBOutlet weak var txtfOldPass: UITextField!
     @IBOutlet weak var txtfNewPass: UITextField!
     @IBOutlet weak var txtfConfirmPass: UITextField!
@@ -24,10 +23,10 @@ class ChangePassViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
         // Do any additional setup after loading the view.
+        //Gọi tham chiếu đến database trên FireBase
         rfDatabase = Database.database().reference()
-        
+        //Dismiss bàn phím
         let dismiss: UITapGestureRecognizer = UITapGestureRecognizer(target: self, action: #selector(LogInViewController.DismissKeyboard))
         view.addGestureRecognizer(dismiss)
         observerKeyboard()
@@ -38,33 +37,34 @@ class ChangePassViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
     
-    
+    //1.Hàm xử lí nút Back được nhấn
     @IBAction func btnBack_Act(_ sender: Any) {
         dismiss(animated: true, completion: nil)
     }
     
-    
+    //2.hàm xử lí button btnChangePass được nhấn
     @IBAction func btnChangePass_Act(_ sender: Any) {
         var oldPass: String = txtfOldPass.text!
         let newPass: String = txtfNewPass.text!
         let confirmPass: String = txtfConfirmPass.text!
-        
+        //Kiểm tra người dùng đã nhập thông tin chưa
         if (oldPass.isEmpty || newPass.isEmpty || confirmPass.isEmpty) {
             showAlertDialog(message: "Bạn cần điền đầy đủ thông tin")
         }
         else {
             var isAcount: Bool = true;
-            //Kiểm Tra độ dài
+            //Kiểm Tra độ dài Mật khẩu
             if (oldPass.characters.count < 6 || newPass.characters.count < 6 || confirmPass.characters.count < 6){
                 isAcount = false;
                 showAlertDialog(message: "Mật khẩu phải có ít nhất 6 kí tự");
                 return;
             }
             //Kiểm tra Pass hiện tại có đúng
-            var t = user.password
-            if (t != oldPass) {
+            //var t = user.password
+            let usr = user.password
+            if (usr != oldPass) {
                 isAcount = false
-                showAlertDialog(message: "Mật khẩu không hợp lệ1");
+                showAlertDialog(message: "Mật khẩu không hợp lệ");
                 return ;
             }
             
@@ -104,29 +104,30 @@ class ChangePassViewController: UIViewController {
         
     }
     
-    //Hàm lấy ID của User
+    //Hàm lấy ID của User, cung cấp bởi lớp Firebase
     func getUid() -> String {
         return (Auth.auth().currentUser?.uid)!;
     }
-    //Hiện cảnh báo
+    //Hàm hiện cảnh báo
     func showAlertDialog(message: String) {
         let alertView = UIAlertController(title: "Thông Báo", message: message, preferredStyle: .alert)
         let action = UIAlertAction(title: "OK", style: .default, handler: nil)
         alertView.addAction(action)
         self.present(alertView, animated: true, completion: nil)
     }
-    //Hiện Progress nếu đang trong quá trình xử lí
+    
+    //Hàm hiện Progress nếu đang trong quá trình xử lí
     func showProgress() {
         loadingNotification = MBProgressHUD.showAdded(to: self.view, animated: true)
         loadingNotification.mode = MBProgressHUDMode.indeterminate
         loadingNotification.label.text = "Đang tải..."
     }
-    //Ẩn Progress
+    //Hàm ẩn Progress
     func hideProgress() {
         loadingNotification.hide(animated: true)
     }
     
-    //MARK: - Show, Hide Keyboard
+    //MARK: - Hiện, Ẩn Keyboard
     
     func textFieldShouldReturn(_ textField: UITextField) -> Bool {
         txtfOldPass.resignFirstResponder()
@@ -137,6 +138,7 @@ class ChangePassViewController: UIViewController {
     //
     fileprivate func observerKeyboard(){
         NotificationCenter.default.addObserver(self, selector: #selector(LogInViewController.keyboardWillShow), name:NSNotification.Name.UIKeyboardWillShow, object: self.view.window)
+        
         NotificationCenter.default.addObserver(self, selector: #selector(LogInViewController.keyboardWillHide), name:NSNotification.Name.UIKeyboardWillHide, object: self.view.window)
     }
     //Ẩn Bàn Phím

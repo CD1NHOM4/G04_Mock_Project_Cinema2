@@ -1,34 +1,34 @@
 //
-//  FilmInfo.swift
-//  HotMovies_UTE
+//  MovieDetail.swift
+//  G04_Mock_Project_Cinema
 //
-//  Created by Cntt03 on 6/3/17.
-//  Copyright © 2017 Kiet Nguyen. All rights reserved.
+//  Created by THANH on 6/7/17.
+//  Copyright © 2017 HCMUTE. All rights reserved.
 //
 
 import Foundation
 import UIKit
 
-class FilmInfo {
+class MovieDetail2 {
     var actor: String
     var content: String
     var director: String
     var duration: Int
-    var filmId: String
-    var filmName: String
+    var movieId: String
+    var movieName: String
     var openningDay: String
     var posterUrl: String
     var type: String
     var videoUrl: String
     
-    init(actor: String, content: String, director: String, duration: Int, filmId: String, filmName: String,
+    init(actor: String, content: String, director: String, duration: Int, movieId: String, movieName: String,
          openningDay: String, posterUrl: String, type: String, videoUrl: String) {
         self.actor = actor
         self.content = content
         self.director = director
         self.duration = duration
-        self.filmId = filmId
-        self.filmName = filmName
+        self.movieId = movieId
+        self.movieName = movieName
         self.openningDay = openningDay
         self.posterUrl = posterUrl
         self.type = type

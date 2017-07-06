@@ -1,9 +1,9 @@
 //
-//  ShowTime.swift
-//  HotMovies_UTE
+//  UserProfile.swift
+//  G04_MockProject_Cinema
 //
-//  Created by Cntt03 on 6/3/17.
-//  Copyright © 2017 Kiet Nguyen. All rights reserved.
+//  Created by THANH on 6/5/17.
+//  Copyright © 2017 HCMUTE. All rights reserved.
 //
 
 import Foundation
