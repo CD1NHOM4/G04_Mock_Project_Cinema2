@@ -52,13 +52,8 @@ class PhimDaChieuTableViewController: UITableViewController {
     }
     
     func loadData() {
-       if (true/*InternetConnection.isConnectedToNetwork()*/) {
             getAllMoviesHasBeenScreened()
-        }
-        else {
-            showAlertDialog(message: "Không có kết nối internet")
-        }
-    }
+           }
     
     func getAllMoviesHasBeenScreened() {
         //Hiện cảnh báo đợi

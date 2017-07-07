@@ -53,12 +53,7 @@ class SapChieuViewController: UITableViewController {
     }
     
     func loadData() {
-        if (true) {
             getAllMoviesCommningSoon()
-        }
-        else {
-            showAlertDialog(message: "Không có kết nối internet")
-        }
     }
     
     //get list phim sắp chiếu from database

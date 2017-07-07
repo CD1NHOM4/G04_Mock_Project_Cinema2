@@ -12,7 +12,6 @@ import UIKit
 class UserProfile: NSObject {
     var userid: String
     var fullName: String
-    //var bornday: Date
     var email: String
     var address: String
     var score: Double

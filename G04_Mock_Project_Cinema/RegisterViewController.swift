@@ -80,7 +80,8 @@ class RegisterViewController: UIViewController, UITextFieldDelegate {
                             "address": address,
                             "password": password,
                             "score": 200,
-                            "balance": 200000,                       "fullName": fullName
+                            "balance": 300000,
+                            "fullName": fullName
                             ] as [String : Any]
                         self.mDatabase.child("Acount").child((user?.uid)!).updateChildValues(dataUser)
                         

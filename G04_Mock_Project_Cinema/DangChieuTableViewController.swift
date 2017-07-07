@@ -49,11 +49,7 @@ class DangChieuTableViewController: UITableViewController {
     }
     
     func loadData() {
-        if (true) {
-            LayPhimDangChieu()        }
-        else {
-            showAlertDialog(message: "Không có kết nối internet")
-        }
+            LayPhimDangChieu()
     }
     
     //Xem profile của người dùng

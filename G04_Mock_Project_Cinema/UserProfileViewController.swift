@@ -21,7 +21,7 @@ class UserProfileViewController: UIViewController {
     
     @IBOutlet weak var txtScore: UITextField!
     
-    @IBOutlet weak var txtfBalance: UITextField!
+    @IBOutlet weak var txtFBalance: UITextField!
     var mDatabase: DatabaseReference!
     var loadingNotification: MBProgressHUD!
     var userToMove: UserProfile!
@@ -50,7 +50,7 @@ class UserProfileViewController: UIViewController {
                     self.txtFAddress.text! = address
                     self.txtFPhone.text! = phone
                     self.txtScore.text! = score
-                    
+                    self.txtFBalance.text! = balance
                     self.userToMove = UserProfile.init(userid: userid, fullName: fullName, email: email, address: address, score: Double(score)!, password: user["password"] as? String ?? "" , phone: phone,balance: Double(balance)!)
                     
                 }
@@ -91,7 +91,7 @@ class UserProfileViewController: UIViewController {
     }
     //Xử lí khi nhấn button btnHome_Act
     @IBAction func btnHome_Act(_ sender: Any) {
-        let srcUserInfo = self.storyboard?.instantiateViewController(withIdentifier: "TrangChu") as! CustomTabBarController//UserProfileViewController
+        let srcUserInfo = self.storyboard?.instantiateViewController(withIdentifier: "TrangChu") as! CustomTabBarController
         self.present(srcUserInfo, animated: true)
         //dismiss(animated: true, completion: nil)
     }

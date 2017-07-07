@@ -40,13 +40,8 @@ class DatVeViewController: UIViewController {
     }
     
     func initData() {
-        if (true/*InternetConnection.isConnectedToNetwork()*/){
             loadData()
             loadDataFromDB()
-        }
-        else {
-            showAlertDialogWithHandler(message: "Lỗi kết nối internet")
-        }
     }
     
     //load data from database
