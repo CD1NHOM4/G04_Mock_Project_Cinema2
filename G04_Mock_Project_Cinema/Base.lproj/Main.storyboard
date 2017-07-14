@@ -497,7 +497,7 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Khc-PA-HIn" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-850" y="296"/>
+            <point key="canvasLocation" x="-851" y="364"/>
         </scene>
         <!--Đã Chiếu-->
         <scene sceneID="O8L-ZJ-c7P">
@@ -928,7 +928,7 @@
         <!--Phim Đã Chiếu-->
         <scene sceneID="DbG-an-uCA">
             <objects>
-                <tableViewController id="DWk-y9-e0H" customClass="PhimDaChieuTableViewController" customModule="G04_Mock_Project_Cinema" customModuleProvider="target" sceneMemberID="viewController">
+                <tableViewController id="DWk-y9-e0H" customClass="PhimDaChieuTableViewController" customModule="G04_Mock_Project_Cinema" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="150" sectionHeaderHeight="30" sectionFooterHeight="30" id="8Rq-mA-b5B">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -964,7 +964,7 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="W5o-P3-3wj" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-159" y="-367"/>
+            <point key="canvasLocation" x="-159" y="-429"/>
         </scene>
         <!--Lua Chon Ghe View Controller-->
         <scene sceneID="5cb-0R-PDY">

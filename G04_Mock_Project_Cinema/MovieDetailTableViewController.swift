@@ -58,8 +58,8 @@ class MovieDetailTableViewController: UITableViewController {
         
     override func numberOfSections(in tableView: UITableView) -> Int {
             // #warning Incomplete implementation, return the number of sections
-        if (movieDetail.movieType != "isShowing"){
-            return 2
+        if (movieDetail.movieType != "PhimDangChieu"){
+            return 1
         }
         return 2
     }

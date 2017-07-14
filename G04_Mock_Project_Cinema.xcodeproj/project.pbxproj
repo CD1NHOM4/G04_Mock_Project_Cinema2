@@ -25,7 +25,6 @@
 		058415FA1F10FDA8000768FE /* Movie.swift in Sources */ = {isa = PBXBuildFile; fileRef = 058415F91F10FDA8000768FE /* Movie.swift */; };
 		058415FC1F10FE0D000768FE /* LogoutViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 058415FB1F10FE0D000768FE /* LogoutViewController.swift */; };
 		058416001F10FEC3000768FE /* LuaChonGheViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 058415FF1F10FEC3000768FE /* LuaChonGheViewController.swift */; };
-		058A8F361EE830B400FF1418 /* TableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 058A8F351EE830B400FF1418 /* TableViewController.swift */; };
 		05B4FC011EE7199C00E68BD4 /* Validate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05B4FC001EE7199C00E68BD4 /* Validate.swift */; };
 		05B4FC031EE71B0E00E68BD4 /* ChangePasssViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05B4FC021EE71B0E00E68BD4 /* ChangePasssViewController.swift */; };
 		05B4FC051EE71B2100E68BD4 /* Dowloader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05B4FC041EE71B2100E68BD4 /* Dowloader.swift */; };
@@ -88,7 +87,6 @@
 		058415F91F10FDA8000768FE /* Movie.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Movie.swift; sourceTree = "<group>"; };
 		058415FB1F10FE0D000768FE /* LogoutViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LogoutViewController.swift; sourceTree = "<group>"; };
 		058415FF1F10FEC3000768FE /* LuaChonGheViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LuaChonGheViewController.swift; sourceTree = "<group>"; };
-		058A8F351EE830B400FF1418 /* TableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TableViewController.swift; sourceTree = "<group>"; };
 		05B4FC001EE7199C00E68BD4 /* Validate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Validate.swift; sourceTree = "<group>"; };
 		05B4FC021EE71B0E00E68BD4 /* ChangePasssViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ChangePasssViewController.swift; sourceTree = "<group>"; };
 		05B4FC041EE71B2100E68BD4 /* Dowloader.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Dowloader.swift; sourceTree = "<group>"; };
@@ -226,7 +224,6 @@
 				054637101EE7122F00947845 /* LogInViewController.swift */,
 				05B4FC0A1EE72F6800E68BD4 /* UserProfileViewController.swift */,
 				05B4FC101EE7C19E00E68BD4 /* SapChieuViewController.swift */,
-				058A8F351EE830B400FF1418 /* TableViewController.swift */,
 				058415FB1F10FE0D000768FE /* LogoutViewController.swift */,
 				058415FF1F10FEC3000768FE /* LuaChonGheViewController.swift */,
 				054642671F166E2200AC57F2 /* MovieDetailTableViewController.swift */,
@@ -585,7 +582,6 @@
 				054637111EE7122F00947845 /* LogInViewController.swift in Sources */,
 				058415F81F10FC4F000768FE /* GioHang.swift in Sources */,
 				05B4FC051EE71B2100E68BD4 /* Dowloader.swift in Sources */,
-				058A8F361EE830B400FF1418 /* TableViewController.swift in Sources */,
 				05B4FC0D1EE72FB400E68BD4 /* Acount.swift in Sources */,
 				05B4FC0B1EE72F6800E68BD4 /* UserProfileViewController.swift in Sources */,
 				05392E961F1696A700A298ED /* CustomDesignButton.swift in Sources */,

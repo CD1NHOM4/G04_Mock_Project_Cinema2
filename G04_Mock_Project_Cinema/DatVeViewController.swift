@@ -181,7 +181,7 @@ class DatVeViewController: UIViewController {
             }
         }
         else {
-            showAlertDialog(message: "Hãy chọn ít nhất 1 vé")
+            showAlertDialog(message: "Bạn cần chọn ít nhất 1 vé")
         }
     }
     
