@@ -629,22 +629,10 @@
                                     <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                     <nil key="highlightedColor"/>
                                 </label>
-                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Y6Y-Kt-gLU" customClass="DesignButton" customModule="G04_Mock_Project_Cinema" customModuleProvider="target">
-                                    <rect key="frame" x="35" y="106" width="50" height="50"/>
-                                    <constraints>
-                                        <constraint firstAttribute="height" constant="50" id="bV9-ws-BmR"/>
-                                        <constraint firstAttribute="width" constant="50" id="od1-U9-hIZ"/>
-                                    </constraints>
-                                    <state key="normal" title="Button" image="videoplay"/>
-                                    <connections>
-                                        <action selector="imgPlay:" destination="7he-Hl-Mf1" eventType="touchUpInside" id="8ny-b3-SaZ"/>
-                                    </connections>
-                                </button>
                             </subviews>
                             <color key="backgroundColor" red="0.8980392157" green="0.22352941179999999" blue="0.20784313730000001" alpha="0.80000000000000004" colorSpace="custom" customColorSpace="sRGB"/>
                             <constraints>
                                 <constraint firstItem="YW6-uy-Ahd" firstAttribute="leading" secondItem="KUa-lg-u1M" secondAttribute="trailing" constant="22.5" id="6f2-iG-xei"/>
-                                <constraint firstItem="Y6Y-Kt-gLU" firstAttribute="leading" secondItem="ZbH-yu-g6E" secondAttribute="leading" constant="35" id="79G-mg-0by"/>
                                 <constraint firstAttribute="trailing" secondItem="QEL-Xz-UiD" secondAttribute="trailing" constant="8" id="7IK-Y5-ACj"/>
                                 <constraint firstAttribute="trailing" secondItem="IjO-oB-Zqm" secondAttribute="trailing" constant="8" id="CbL-mO-wL3"/>
                                 <constraint firstItem="IjO-oB-Zqm" firstAttribute="top" secondItem="Bb2-tt-1QK" secondAttribute="bottom" constant="8" id="ERu-XU-b2l"/>
@@ -664,13 +652,11 @@
                                 <constraint firstItem="arm-wJ-Wde" firstAttribute="leading" secondItem="9lr-Oh-yFD" secondAttribute="trailing" constant="14" id="XJ6-5D-eim"/>
                                 <constraint firstItem="6MI-XZ-lU9" firstAttribute="top" secondItem="QnG-qx-zLm" secondAttribute="bottom" constant="28" id="f0N-9X-k8p"/>
                                 <constraint firstAttribute="trailing" secondItem="cLa-vc-K2i" secondAttribute="trailing" constant="8" id="f5F-jh-neD"/>
-                                <constraint firstItem="Y6Y-Kt-gLU" firstAttribute="top" secondItem="ZbH-yu-g6E" secondAttribute="top" constant="106" id="fOR-eQ-lbd"/>
                                 <constraint firstItem="KUa-lg-u1M" firstAttribute="top" secondItem="6MI-XZ-lU9" secondAttribute="bottom" constant="15" id="fa2-fJ-y68"/>
                                 <constraint firstItem="arm-wJ-Wde" firstAttribute="top" secondItem="YW6-uy-Ahd" secondAttribute="bottom" constant="11" id="fjz-04-Mwd"/>
                                 <constraint firstItem="IjO-oB-Zqm" firstAttribute="width" secondItem="Bb2-tt-1QK" secondAttribute="width" id="i5a-BG-oep"/>
                                 <constraint firstItem="cLa-vc-K2i" firstAttribute="top" secondItem="ZbH-yu-g6E" secondAttribute="top" constant="20" id="jD3-XV-V3G"/>
                                 <constraint firstItem="X6B-9h-EKX" firstAttribute="top" secondItem="ZbH-yu-g6E" secondAttribute="top" constant="20" id="jIe-Pg-q3z"/>
-                                <constraint firstAttribute="bottom" secondItem="Y6Y-Kt-gLU" secondAttribute="bottom" constant="94" id="jeg-7h-JhL"/>
                                 <constraint firstItem="6MI-XZ-lU9" firstAttribute="leading" secondItem="X6B-9h-EKX" secondAttribute="trailing" constant="8" id="n3f-Jt-hai"/>
                                 <constraint firstItem="Bb2-tt-1QK" firstAttribute="leading" secondItem="QnG-qx-zLm" secondAttribute="trailing" constant="26.5" id="nEY-1e-669"/>
                                 <constraint firstItem="KUa-lg-u1M" firstAttribute="leading" secondItem="X6B-9h-EKX" secondAttribute="trailing" constant="8" id="nEk-0e-gQp"/>
@@ -729,24 +715,15 @@
                                             <rect key="frame" x="0.0" y="0.0" width="375" height="109"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="2D" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="W6X-5z-O3e">
-                                                    <rect key="frame" x="308" y="29" width="51" height="51"/>
-                                                    <constraints>
-                                                        <constraint firstAttribute="width" constant="51" id="SEX-GX-lQM"/>
-                                                        <constraint firstAttribute="height" constant="51" id="YTB-JH-JCj"/>
-                                                    </constraints>
-                                                    <fontDescription key="fontDescription" name="HiraMinProN-W6" family="Hiragino Mincho ProN" pointSize="36"/>
-                                                    <color key="textColor" red="0.29803922770000002" green="0.29803922770000002" blue="0.29803922770000002" alpha="1" colorSpace="calibratedRGB"/>
-                                                    <nil key="highlightedColor"/>
-                                                </label>
-                                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0Rh-73-4Hb" customClass="CustomDesignButton" customModule="G04_Mock_Project_Cinema" customModuleProvider="target">
+                                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0Rh-73-4Hb">
                                                     <rect key="frame" x="8" y="15" width="70" height="30"/>
+                                                    <color key="backgroundColor" red="0.69927382400000004" green="0.82787843009999995" blue="0.87601198189999996" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                     <constraints>
                                                         <constraint firstAttribute="width" constant="70" id="pvy-8Z-Oid"/>
                                                         <constraint firstAttribute="height" constant="30" id="rGo-9c-atw"/>
                                                     </constraints>
                                                     <state key="normal" title="8:30">
-                                                        <color key="titleColor" red="0.8980392157" green="0.22352941179999999" blue="0.20784313730000001" alpha="0.80000000000000004" colorSpace="custom" customColorSpace="sRGB"/>
+                                                        <color key="titleColor" red="1" green="0.016467693960000002" blue="0.04106647276" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                     </state>
                                                     <userDefinedRuntimeAttributes>
                                                         <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
@@ -763,14 +740,15 @@
                                                         <action selector="btn850:" destination="7he-Hl-Mf1" eventType="touchUpInside" id="4pU-1Y-vDP"/>
                                                     </connections>
                                                 </button>
-                                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="r5R-8P-984" customClass="CustomDesignButton" customModule="G04_Mock_Project_Cinema" customModuleProvider="target">
+                                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="r5R-8P-984">
                                                     <rect key="frame" x="238" y="15" width="70" height="30"/>
+                                                    <color key="backgroundColor" red="0.69927382400000004" green="0.82787843009999995" blue="0.87601198189999996" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                     <constraints>
                                                         <constraint firstAttribute="height" constant="30" id="Any-pC-Em5"/>
                                                         <constraint firstAttribute="width" constant="70" id="Pri-FE-A95"/>
                                                     </constraints>
                                                     <state key="normal" title="11:30">
-                                                        <color key="titleColor" red="0.8980392157" green="0.22352941179999999" blue="0.20784313730000001" alpha="0.80000000000000004" colorSpace="custom" customColorSpace="sRGB"/>
+                                                        <color key="titleColor" red="1" green="0.016467693960000002" blue="0.04106647276" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                     </state>
                                                     <userDefinedRuntimeAttributes>
                                                         <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
@@ -787,14 +765,15 @@
                                                         <action selector="btn1125:" destination="7he-Hl-Mf1" eventType="touchUpInside" id="U7o-fA-1eb"/>
                                                     </connections>
                                                 </button>
-                                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="47C-nD-uHV" customClass="CustomDesignButton" customModule="G04_Mock_Project_Cinema" customModuleProvider="target">
+                                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="47C-nD-uHV">
                                                     <rect key="frame" x="8" y="64" width="70" height="30"/>
+                                                    <color key="backgroundColor" red="0.69927382400000004" green="0.82787843009999995" blue="0.87601198189999996" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                     <constraints>
                                                         <constraint firstAttribute="height" constant="30" id="DdJ-8G-sVF"/>
                                                         <constraint firstAttribute="width" constant="70" id="IUD-En-27T"/>
                                                     </constraints>
                                                     <state key="normal" title="14:00">
-                                                        <color key="titleColor" red="0.8980392157" green="0.22352941179999999" blue="0.20784313730000001" alpha="0.80000000000000004" colorSpace="custom" customColorSpace="sRGB"/>
+                                                        <color key="titleColor" red="1" green="0.016467693960000002" blue="0.04106647276" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                     </state>
                                                     <userDefinedRuntimeAttributes>
                                                         <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
@@ -811,14 +790,15 @@
                                                         <action selector="btn1400:" destination="7he-Hl-Mf1" eventType="touchUpInside" id="mqt-UF-J43"/>
                                                     </connections>
                                                 </button>
-                                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cV6-sn-WZ4" customClass="CustomDesignButton" customModule="G04_Mock_Project_Cinema" customModuleProvider="target">
+                                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cV6-sn-WZ4">
                                                     <rect key="frame" x="238" y="64" width="70" height="30"/>
+                                                    <color key="backgroundColor" red="0.69927382400000004" green="0.82787843009999995" blue="0.87601198189999996" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                     <constraints>
                                                         <constraint firstAttribute="width" constant="70" id="AAY-zd-nc9"/>
                                                         <constraint firstAttribute="height" constant="30" id="Umm-mX-RSw"/>
                                                     </constraints>
                                                     <state key="normal" title="19:00">
-                                                        <color key="titleColor" red="0.8980392157" green="0.22352941179999999" blue="0.20784313730000001" alpha="0.80000000000000004" colorSpace="custom" customColorSpace="sRGB"/>
+                                                        <color key="titleColor" red="1" green="0.016467693960000002" blue="0.04106647276" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                     </state>
                                                     <userDefinedRuntimeAttributes>
                                                         <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
@@ -835,14 +815,15 @@
                                                         <action selector="btn1900:" destination="7he-Hl-Mf1" eventType="touchUpInside" id="Pwf-Cv-xYI"/>
                                                     </connections>
                                                 </button>
-                                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="HMA-mX-5Hg" customClass="CustomDesignButton" customModule="G04_Mock_Project_Cinema" customModuleProvider="target">
+                                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="HMA-mX-5Hg">
                                                     <rect key="frame" x="124" y="64" width="70" height="30"/>
+                                                    <color key="backgroundColor" red="0.69927382400000004" green="0.82787843009999995" blue="0.87601198189999996" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                     <constraints>
                                                         <constraint firstAttribute="height" constant="30" id="6Ae-XW-PNJ"/>
                                                         <constraint firstAttribute="width" constant="70" id="qw3-tT-9av"/>
                                                     </constraints>
                                                     <state key="normal" title="16:30">
-                                                        <color key="titleColor" red="0.8980392157" green="0.22352941179999999" blue="0.20784313730000001" alpha="0.80000000000000004" colorSpace="custom" customColorSpace="sRGB"/>
+                                                        <color key="titleColor" red="1" green="0.016467693960000002" blue="0.04106647276" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                     </state>
                                                     <userDefinedRuntimeAttributes>
                                                         <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
@@ -859,14 +840,15 @@
                                                         <action selector="btn1635:" destination="7he-Hl-Mf1" eventType="touchUpInside" id="pz0-Ag-Efk"/>
                                                     </connections>
                                                 </button>
-                                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lEp-Ki-bz0" customClass="CustomDesignButton" customModule="G04_Mock_Project_Cinema" customModuleProvider="target">
+                                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lEp-Ki-bz0">
                                                     <rect key="frame" x="124" y="15" width="70" height="30"/>
+                                                    <color key="backgroundColor" red="0.69927382400000004" green="0.82787843009999995" blue="0.87601198189999996" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                     <constraints>
                                                         <constraint firstAttribute="height" constant="30" id="fie-B7-OkW"/>
                                                         <constraint firstAttribute="width" constant="70" id="ngH-XE-beS"/>
                                                     </constraints>
                                                     <state key="normal" title="10:00">
-                                                        <color key="titleColor" red="0.8980392157" green="0.22352941179999999" blue="0.20784313730000001" alpha="0.80000000000000004" colorSpace="custom" customColorSpace="sRGB"/>
+                                                        <color key="titleColor" red="1" green="0.016467693960000002" blue="0.04106647276" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                     </state>
                                                     <userDefinedRuntimeAttributes>
                                                         <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
@@ -883,6 +865,16 @@
                                                         <action selector="btn1000:" destination="7he-Hl-Mf1" eventType="touchUpInside" id="zHS-vf-mHK"/>
                                                     </connections>
                                                 </button>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="2D" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="W6X-5z-O3e">
+                                                    <rect key="frame" x="316" y="29" width="51" height="51"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="width" constant="51" id="SEX-GX-lQM"/>
+                                                        <constraint firstAttribute="height" constant="51" id="YTB-JH-JCj"/>
+                                                    </constraints>
+                                                    <fontDescription key="fontDescription" name="HiraMinProN-W6" family="Hiragino Mincho ProN" pointSize="36"/>
+                                                    <color key="textColor" red="0.29803922770000002" green="0.29803922770000002" blue="0.29803922770000002" alpha="1" colorSpace="calibratedRGB"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
                                             </subviews>
                                             <constraints>
                                                 <constraint firstAttribute="bottomMargin" secondItem="W6X-5z-O3e" secondAttribute="bottom" constant="20.5" id="6oA-Jw-lqf"/>
@@ -890,10 +882,10 @@
                                                 <constraint firstItem="0Rh-73-4Hb" firstAttribute="top" secondItem="UM9-jR-GQt" secondAttribute="top" constant="15" id="BrJ-2j-gzg"/>
                                                 <constraint firstItem="HMA-mX-5Hg" firstAttribute="leading" secondItem="47C-nD-uHV" secondAttribute="trailing" constant="46" id="HLV-t1-6A5"/>
                                                 <constraint firstItem="lEp-Ki-bz0" firstAttribute="top" secondItem="UM9-jR-GQt" secondAttribute="top" constant="15" id="Jvp-gb-ei1"/>
-                                                <constraint firstAttribute="leadingMargin" secondItem="W6X-5z-O3e" secondAttribute="leading" constant="-300" id="LDe-ek-jF2"/>
+                                                <constraint firstAttribute="leadingMargin" secondItem="W6X-5z-O3e" secondAttribute="leading" constant="-308" id="LDe-ek-jF2"/>
                                                 <constraint firstAttribute="bottom" secondItem="47C-nD-uHV" secondAttribute="bottom" constant="15" id="Ucb-bI-ceG"/>
-                                                <constraint firstItem="47C-nD-uHV" firstAttribute="leading" secondItem="W6X-5z-O3e" secondAttribute="trailing" constant="-351" id="Yfe-Oa-0Wj"/>
-                                                <constraint firstItem="0Rh-73-4Hb" firstAttribute="leading" secondItem="W6X-5z-O3e" secondAttribute="trailing" constant="-351" id="YuB-me-dDz"/>
+                                                <constraint firstItem="47C-nD-uHV" firstAttribute="leading" secondItem="W6X-5z-O3e" secondAttribute="trailing" constant="-359" id="Yfe-Oa-0Wj"/>
+                                                <constraint firstItem="0Rh-73-4Hb" firstAttribute="leading" secondItem="W6X-5z-O3e" secondAttribute="trailing" constant="-359" id="YuB-me-dDz"/>
                                                 <constraint firstItem="r5R-8P-984" firstAttribute="top" secondItem="UM9-jR-GQt" secondAttribute="top" constant="15" id="cee-CO-pJ2"/>
                                                 <constraint firstItem="r5R-8P-984" firstAttribute="leading" secondItem="lEp-Ki-bz0" secondAttribute="trailing" constant="44" id="cg5-K4-0QY"/>
                                                 <constraint firstItem="lEp-Ki-bz0" firstAttribute="leading" secondItem="0Rh-73-4Hb" secondAttribute="trailing" constant="46" id="e4I-ph-d40"/>
@@ -2160,6 +2152,5 @@
         <image name="imgNotAvailable" width="127" height="127"/>
         <image name="now" width="29" height="29"/>
         <image name="user" width="28" height="28"/>
-        <image name="videoplay" width="512" height="512"/>
     </resources>
 </document>

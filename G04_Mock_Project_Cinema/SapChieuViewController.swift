@@ -36,6 +36,7 @@ class SapChieuViewController: UITableViewController {
         
         //
          self.clearsSelectionOnViewWillAppear = false
+        //tham chiếu đến firebase
         mDatabase = Database.database().reference()
         
         //register
