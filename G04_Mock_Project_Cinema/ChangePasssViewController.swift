@@ -60,7 +60,6 @@ class ChangePassViewController: UIViewController {
                 return;
             }
             //Kiểm tra Pass hiện tại có đúng
-            //var t = user.password
             let usr = user.password
             if (usr != oldPass) {
                 isAcount = false

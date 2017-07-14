@@ -64,6 +64,7 @@
                                                 <constraint firstAttribute="height" constant="30" id="YR3-6k-xFo"/>
                                             </constraints>
                                             <nil key="textColor"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="12"/>
                                             <textInputTraits key="textInputTraits"/>
                                         </textField>
                                         <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Email" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="ot6-f6-IbZ">
@@ -296,10 +297,10 @@
             </objects>
             <point key="canvasLocation" x="625" y="-428"/>
         </scene>
-        <!--Forget Pass View Controller-->
+        <!--Forgot Pass View Controller-->
         <scene sceneID="1BG-N4-DpL">
             <objects>
-                <viewController id="PHv-bO-rM6" customClass="ForgetPassViewController" customModule="G04_Mock_Project_Cinema" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="PHv-bO-rM6" customClass="ForgotPassViewController" customModule="G04_Mock_Project_Cinema" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="t8i-jy-7lk"/>
                         <viewControllerLayoutGuide type="bottom" id="OGr-Ni-5m2"/>
@@ -373,12 +374,12 @@
                         </constraints>
                     </view>
                     <connections>
-                        <outlet property="txtEmailRegistered" destination="GpY-RO-PCW" id="2zq-HT-Hek"/>
+                        <outlet property="txtEmailRegistered" destination="GpY-RO-PCW" id="zFP-UI-wp1"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="oJc-ux-5dn" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1511" y="136"/>
+            <point key="canvasLocation" x="1492" y="145"/>
         </scene>
         <!--Change Pass View Controller-->
         <scene sceneID="dNA-nG-gzN">
@@ -484,7 +485,7 @@
         <scene sceneID="Vv0-Ap-ZIh">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="afZ-uj-aQo" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Sẽ Chiếu" id="7jQ-sd-YEv"/>
+                    <tabBarItem key="tabBarItem" title="Sẽ Chiếu" image="now" id="7jQ-sd-YEv"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="SQw-Fd-fub">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
@@ -503,7 +504,7 @@
         <scene sceneID="O8L-ZJ-c7P">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="BrC-vc-0eo" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Đã Chiếu" id="1uY-sg-3uW"/>
+                    <tabBarItem key="tabBarItem" title="Đã Chiếu" image="now" id="1uY-sg-3uW"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="Zyf-ke-6v9">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
@@ -522,7 +523,7 @@
         <scene sceneID="ZBB-LY-OcL">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="4xL-h6-udd" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Đang Chiếu" id="Bgk-iF-iDS"/>
+                    <tabBarItem key="tabBarItem" title="Đang Chiếu" image="now" id="Bgk-iF-iDS"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="FT3-p5-qAa">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
@@ -2157,6 +2158,7 @@
         <image name="CGV_Logo" width="624" height="160"/>
         <image name="close" width="128" height="128"/>
         <image name="imgNotAvailable" width="127" height="127"/>
+        <image name="now" width="29" height="29"/>
         <image name="user" width="28" height="28"/>
         <image name="videoplay" width="512" height="512"/>
     </resources>

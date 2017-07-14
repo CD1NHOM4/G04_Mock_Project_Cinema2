@@ -1130,7 +1130,8 @@ class LuaChonGheViewController: UIViewController {
                 //save into movie
                 let dataUpdates = ["state": true, "bookBy": getUid()] as [String: AnyObject]
                 //mDatabase.child("movies").child(movieDetail.movieType).child(movieDetail.movieId).child("showTime").child(time).child("seat").child(place).updateChildValues(dataUpdates)
-                mDatabase.child("movies").child("PhimDangChieu").child(movieDetail.movieId).child("showTime").child("850").child("seat").child("A7").updateChildValues(dataUpdates)            }
+                mDatabase.child("movies").child("PhimDangChieu").child("1").child("showTime").child("850").child("seat").child("A5").updateChildValues(dataUpdates)            }
+            
             //update balance
             let dataBalance = ["balance": Int64(userInfo.balance) - money]
             mDatabase.child("Acount").child(getUid()).updateChildValues(dataBalance)
