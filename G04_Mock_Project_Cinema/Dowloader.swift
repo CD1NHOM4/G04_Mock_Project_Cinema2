@@ -24,15 +24,15 @@ class Downloader {
             completion(data, response, error)
             }.resume()
     }
-//    //3.
-//    class func downloadImage(url: URL){
-//        print("Bắt đầu Download")
-//        getDataFromUrl(url: url) { (data, response, error)  in
-//            guard let _ = data, error == nil else { return }
-//            print(response?.suggestedFilename ?? url.lastPathComponent)
-//            print("Download Hoàn thành")
-//            DispatchQueue.main.async() { () -> Void in
-//            }
-//        }
-//    }
+    //    //3.
+    //    class func downloadImage(url: URL){
+    //        print("Bắt đầu Download")
+    //        getDataFromUrl(url: url) { (data, response, error)  in
+    //            guard let _ = data, error == nil else { return }
+    //            print(response?.suggestedFilename ?? url.lastPathComponent)
+    //            print("Download Hoàn thành")
+    //            DispatchQueue.main.async() { () -> Void in
+    //            }
+    //        }
+    //    }
 }

@@ -40,7 +40,7 @@ class SapChieuViewController: UITableViewController {
         mDatabase = Database.database().reference()
         
         //register
-        tableView.register(UINib(nibName: "CustomTableViewCell", bundle: nil), forCellReuseIdentifier: "FilmRow")
+        tableView.register(UINib(nibName: "CustomTableViewCell", bundle: nil), forCellReuseIdentifier: "MovieRowCell")
         tableView.estimatedRowHeight = tableView.rowHeight
         tableView.rowHeight = UITableViewAutomaticDimension
         loadData()
@@ -54,11 +54,11 @@ class SapChieuViewController: UITableViewController {
     }
     
     func loadData() {
-            getAllMoviesCommningSoon()
+            DanhSachPhimDangChieu()
     }
     
     //get list phim sắp chiếu from database
-    func getAllMoviesCommningSoon() {
+    func DanhSachPhimDangChieu() {
         showProgress()
         mDatabase.child("movies").child("PhimSapChieu").observe(.childAdded, with: { (snapshot) -> Void in
             var movie: [String: AnyObject] = (snapshot.value as? [String: AnyObject])!
@@ -149,7 +149,7 @@ class SapChieuViewController: UITableViewController {
     
     //load data into cell
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "FilmRow", for: indexPath) as! CustomTableViewCell
+        let cell = tableView.dequeueReusableCell(withIdentifier: "MovieRowCell", for: indexPath) as! CustomTableViewCell
         let movieDetail: MovieDetail
         if (searchController.isActive && searchController.searchBar.text != "") {
             movieDetail = searchFilms[indexPath.row]

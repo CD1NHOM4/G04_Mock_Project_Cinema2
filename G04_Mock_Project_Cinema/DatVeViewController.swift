@@ -18,8 +18,7 @@ class DatVeViewController: UIViewController {
     
     @IBOutlet weak var lblMoney: UILabel!
     @IBOutlet weak var txtTime: UILabel!
-    @IBOutlet weak var txtNumberTicket: UILabel!//UITextField!//BorderLabel!
-    
+    @IBOutlet weak var txtNumberTicket: UILabel!
     @IBOutlet weak var txtPrice: UILabel!
     var mDatabase: DatabaseReference!
     var progressDialog: MBProgressHUD!
@@ -40,17 +39,19 @@ class DatVeViewController: UIViewController {
     }
     
     func initData() {
-            loadData()
-            loadDataFromDB()
+        loadData()
+        loadDataFromDB()
     }
     
     //load data from database
     func loadDataFromDB() {
         //show progress movieDetail.movieType .child("PhimDangChieu")movieDetail.movieId .child("1").child("showTime").child("850").child("showTimeInfo")
         showProgress()
-      //  mDatabase.child("movies").child("PhimDaChieu").observeSingleEvent(of: .value, with: { (snapshot)  in
-       // mDatabase.child("movies").child("PhimDaChieu").observe(.childAdded, with: { (snapshot) -> Void in
+        //  mDatabase.child("movies").child("PhimDaChieu").observeSingleEvent(of: .value, with: { (snapshot)  in
+        // mDatabase.child("movies").child("PhimDaChieu").observe(.childAdded, with: { (snapshot) -> Void in
         mDatabase.child("movies").child("PhimDangChieu").child("1").child("showTime").child("850").child("showTimeInfo").observeSingleEvent(of: .value, with: { (snapshot) in
+        //mDatabase.child("films").child("PhimDangChieu").child(movieDetail.movieId).child("showTime").child(time).child("seat").observe(.childAdded, with: { (snapshot) in
+                
             self.hideProgress()
             if let showTimeInfo = snapshot.value as? [String: AnyObject] {
                 let price = showTimeInfo["price"] as? Int64 ?? 0
@@ -146,7 +147,7 @@ class DatVeViewController: UIViewController {
                             let score = user["score"] as? Double ?? 0
                             let password = user["password"] as? String ?? ""
                             //Khởi tạo
-                          //  init(userid: String, fullName: String, email: String, address: String, score: Double,
+                            //  init(userid: String, fullName: String, email: String, address: String, score: Double,
                             //password: String, phone: String, balance: Double) {
                             self.userInfo = UserProfile.init(userid: self.getUid(), fullName: fullName, email: email, address: address, score: score, password: password, phone: phone,balance:balance)
                             
@@ -168,8 +169,9 @@ class DatVeViewController: UIViewController {
                 }
             }
             else {
-                let alertView = UIAlertController(title: "Thông Báo", message: "Hãy đăng nhập trước khi sử dụng tính năng này", preferredStyle: .alert)
-                let action = UIAlertAction(title: "Ok", style: .default, handler: nil)
+                
+                let alertView = UIAlertController(title: "Thông Báo", message: "Bạn cần đăng nhập", preferredStyle: .alert)
+                let action = UIAlertAction(title: "Chấp nhân", style: .default, handler: nil)
                 let actionLogin = UIAlertAction(title: "Đăng nhập", style: .default, handler: { (action: UIAlertAction) in
                     let srcSignIn = self.storyboard?.instantiateViewController(withIdentifier: "signInId") as! LogInViewController
                     self.present(srcSignIn, animated: true, completion: nil)
@@ -188,7 +190,7 @@ class DatVeViewController: UIViewController {
     //show alertView
     func showAlertDialog(message: String) {
         let alertView = UIAlertController(title: "Thông Báo", message: message, preferredStyle: .alert)
-        let action = UIAlertAction(title: "Ok", style: .default, handler: nil)
+        let action = UIAlertAction(title: "Chấp nhận", style: .default, handler: nil)
         alertView.addAction(action)
         self.present(alertView, animated: true, completion: nil)
     }

@@ -25,7 +25,7 @@ extension PhimDaChieuTableViewController: UISearchResultsUpdating {
 }
 
 class PhimDaChieuTableViewController: UITableViewController {
-
+    
     var mDatabase: DatabaseReference!
     var movies = [MovieDetail]()
     var progressDialog: MBProgressHUD!
@@ -37,11 +37,11 @@ class PhimDaChieuTableViewController: UITableViewController {
         //tham chiếu lên firebase
         mDatabase = Database.database().reference()
         // Uncomment the following line to preserve selection between presentations
-         self.clearsSelectionOnViewWillAppear = false
+        self.clearsSelectionOnViewWillAppear = false
         loadData()
         
         //Register
-        tableView.register(UINib(nibName: "CustomTableViewCell", bundle: nil), forCellReuseIdentifier: "FilmRow")
+        tableView.register(UINib(nibName: "CustomTableViewCell", bundle: nil), forCellReuseIdentifier: "MovieRowCell")
         //Tuy chon tim kiem
         searchController.searchResultsUpdater = self
         searchController.searchBar.delegate = self
@@ -52,10 +52,10 @@ class PhimDaChieuTableViewController: UITableViewController {
     }
     
     func loadData() {
-            getAllMoviesHasBeenScreened()
-           }
+        LayPhimDaChieu()
+    }
     
-    func getAllMoviesHasBeenScreened() {
+    func LayPhimDaChieu() {
         //Hiện cảnh báo đợi
         showProgress()
         mDatabase.child("movies").child("PhimDaChieu").observe(.childAdded, with: { (snapshot) -> Void in
@@ -145,7 +145,7 @@ class PhimDaChieuTableViewController: UITableViewController {
     
     //load data into cell
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "FilmRow", for: indexPath) as! CustomTableViewCell
+        let cell = tableView.dequeueReusableCell(withIdentifier: "MovieRowCell", for: indexPath) as! CustomTableViewCell
         let movieDetail: MovieDetail
         if (searchController.isActive && searchController.searchBar.text != "") {
             movieDetail = searchFilms[indexPath.row]

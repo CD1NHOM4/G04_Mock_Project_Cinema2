@@ -33,7 +33,7 @@ class LuaChonGheViewController: UIViewController {
     @IBOutlet weak var btnB3: CustomDesignButton!
     @IBOutlet weak var btnB2: CustomDesignButton!
     @IBOutlet weak var btnB1: CustomDesignButton!
-
+    
     @IBOutlet weak var btnC10: CustomDesignButton!
     @IBOutlet weak var btnC9: CustomDesignButton!
     @IBOutlet weak var btnC8: CustomDesignButton!
@@ -44,7 +44,7 @@ class LuaChonGheViewController: UIViewController {
     @IBOutlet weak var btnC3: CustomDesignButton!
     @IBOutlet weak var btnC2: CustomDesignButton!
     @IBOutlet weak var btnC1: CustomDesignButton!
-
+    
     
     var mDatabase: DatabaseReference!
     var movieDetail: MovieDetail!
@@ -82,266 +82,267 @@ class LuaChonGheViewController: UIViewController {
     func loadData() {
         //show progress
         showProgress()
-        //mDatabase.child("movies").child(movieDetail.movieType).child(movieDetail.movieId).child("showTime").child(time).child("seat").observe(.childAdded, with: { (snapshot) in
-       // mDatabase.child("movies").child(movieDetail.movieType).child(movieDetail.movieId).child("showTime").child(time).child("seat").observe(.childAdded, with: { (snapshot) in
-           mDatabase.child("movies").child("PhimDangChieu").child("1").child("showTime").child("850").child("seat").observe(.childAdded, with: { (snapshot) in
+        var ab = movieDetail.movieType
+        //mDatabase.child("movies").child("PhimDangChieu").child(movieDetail.movieId).child("showTime").child(time).child("seat").observe(.childAdded, with: { (snapshot) in
+            // mDatabase.child("movies").child(movieDetail.movieType).child(movieDetail.movieId).child("showTime").child(time).child("seat").observe(.childAdded, with: { (snapshot) in
+            mDatabase.child("movies").child("PhimDangChieu").child("1").child("showTime").child("850").child("seat").observe(.childAdded, with: { (snapshot) in
             //hide progress
-                self.hideProgress()
-                let seatInfo = snapshot.value as? [String: AnyObject]
-                let seatKey = snapshot.key
-                //create object seat
-                let bookBy = seatInfo?["bookBy"] as? String ?? ""
-                let state = seatInfo?["state"] as? Bool ?? false
-                let seat = Seat.init(bookBy: bookBy, state: state, seatName: seatKey)
-                
-                //add to list
-                self.seats.append(seat)
-                //hight light seat choosed
-                for seatData in self.seats {
-                    if seatData.seatName == "A1" {
-                        let state: Bool = seatData.state
-                        if (state) {
-                            self.btnA1.isUserInteractionEnabled = false
-                            self.btnA1.backgroundColor = UIColor.blue
-                            self.btnA1.setTitleColor(UIColor.white, for: UIControlState.normal)
-                        }
+            self.hideProgress()
+            let seatInfo = snapshot.value as? [String: AnyObject]
+            let seatKey = snapshot.key
+            //create object seat
+            let bookBy = seatInfo?["bookBy"] as? String ?? ""
+            let state = seatInfo?["state"] as? Bool ?? false
+            let seat = Seat.init(bookBy: bookBy, state: state, seatName: seatKey)
+            
+            //add to list
+            self.seats.append(seat)
+            //hight light seat choosed
+            for seatData in self.seats {
+                if seatData.seatName == "A1" {
+                    let state: Bool = seatData.state
+                    if (state) {
+                        self.btnA1.isUserInteractionEnabled = false
+                        self.btnA1.backgroundColor = UIColor.blue
+                        self.btnA1.setTitleColor(UIColor.white, for: UIControlState.normal)
                     }
-                    else if seatData.seatName == "A2" {
-                        let state: Bool = seatData.state
-                        if (state) {
-                            self.btnA2.isUserInteractionEnabled = false
-                            self.btnA2.backgroundColor = UIColor.blue
-                            self.btnA2.setTitleColor(UIColor.white, for: UIControlState.normal)
-                        }
+                }
+                else if seatData.seatName == "A2" {
+                    let state: Bool = seatData.state
+                    if (state) {
+                        self.btnA2.isUserInteractionEnabled = false
+                        self.btnA2.backgroundColor = UIColor.blue
+                        self.btnA2.setTitleColor(UIColor.white, for: UIControlState.normal)
                     }
-                    else if seatData.seatName == "A3" {
-                        let state: Bool = seatData.state
-                        if (state) {
-                            self.btnA3.isUserInteractionEnabled = false
-                            self.btnA3.backgroundColor = UIColor.blue
-                            self.btnA3.setTitleColor(UIColor.white, for: UIControlState.normal)
-                        }
+                }
+                else if seatData.seatName == "A3" {
+                    let state: Bool = seatData.state
+                    if (state) {
+                        self.btnA3.isUserInteractionEnabled = false
+                        self.btnA3.backgroundColor = UIColor.blue
+                        self.btnA3.setTitleColor(UIColor.white, for: UIControlState.normal)
                     }
-                    else if seatData.seatName == "A4" {
-                        let state: Bool = seatData.state
-                        if (state) {
-                            self.btnA4.isUserInteractionEnabled = false
-                            self.btnA4.backgroundColor = UIColor.blue
-                            self.btnA4.setTitleColor(UIColor.white, for: UIControlState.normal)
-                        }
+                }
+                else if seatData.seatName == "A4" {
+                    let state: Bool = seatData.state
+                    if (state) {
+                        self.btnA4.isUserInteractionEnabled = false
+                        self.btnA4.backgroundColor = UIColor.blue
+                        self.btnA4.setTitleColor(UIColor.white, for: UIControlState.normal)
                     }
-                    else if seatData.seatName == "A5" {
-                        let state: Bool = seatData.state
-                        if (state) {
-                            self.btnA5.isUserInteractionEnabled = false
-                            self.btnA5.backgroundColor = UIColor.blue
-                            self.btnA5.setTitleColor(UIColor.white, for: UIControlState.normal)
-                        }
+                }
+                else if seatData.seatName == "A5" {
+                    let state: Bool = seatData.state
+                    if (state) {
+                        self.btnA5.isUserInteractionEnabled = false
+                        self.btnA5.backgroundColor = UIColor.blue
+                        self.btnA5.setTitleColor(UIColor.white, for: UIControlState.normal)
                     }
-                    else if seatData.seatName == "A6" {
-                        let state: Bool = seatData.state
-                        if (state) {
-                            self.btnA6.isUserInteractionEnabled = false
-                            self.btnA6.backgroundColor = UIColor.blue
-                            self.btnA6.setTitleColor(UIColor.white, for: UIControlState.normal)
-                        }
+                }
+                else if seatData.seatName == "A6" {
+                    let state: Bool = seatData.state
+                    if (state) {
+                        self.btnA6.isUserInteractionEnabled = false
+                        self.btnA6.backgroundColor = UIColor.blue
+                        self.btnA6.setTitleColor(UIColor.white, for: UIControlState.normal)
                     }
-                    else if seatData.seatName == "A7" {
-                        let state: Bool = seatData.state
-                        if (state) {
-                            self.btnA7.isUserInteractionEnabled = false
-                            self.btnA7.backgroundColor = UIColor.blue
-                            self.btnA7.setTitleColor(UIColor.white, for: UIControlState.normal)
-                        }
+                }
+                else if seatData.seatName == "A7" {
+                    let state: Bool = seatData.state
+                    if (state) {
+                        self.btnA7.isUserInteractionEnabled = false
+                        self.btnA7.backgroundColor = UIColor.blue
+                        self.btnA7.setTitleColor(UIColor.white, for: UIControlState.normal)
                     }
-                    else if seatData.seatName == "A8" {
-                        let state: Bool = seatData.state
-                        if (state) {
-                            self.btnA8.isUserInteractionEnabled = false
-                            self.btnA8.backgroundColor = UIColor.blue
-                            self.btnA8.setTitleColor(UIColor.white, for: UIControlState.normal)
-                        }
+                }
+                else if seatData.seatName == "A8" {
+                    let state: Bool = seatData.state
+                    if (state) {
+                        self.btnA8.isUserInteractionEnabled = false
+                        self.btnA8.backgroundColor = UIColor.blue
+                        self.btnA8.setTitleColor(UIColor.white, for: UIControlState.normal)
                     }
-                    else if seatData.seatName == "A9" {
-                        let state: Bool = seatData.state
-                        if (state) {
-                            self.btnA9.isUserInteractionEnabled = false
-                            self.btnA9.backgroundColor = UIColor.blue
-                            self.btnA9.setTitleColor(UIColor.white, for: UIControlState.normal)
-                        }
+                }
+                else if seatData.seatName == "A9" {
+                    let state: Bool = seatData.state
+                    if (state) {
+                        self.btnA9.isUserInteractionEnabled = false
+                        self.btnA9.backgroundColor = UIColor.blue
+                        self.btnA9.setTitleColor(UIColor.white, for: UIControlState.normal)
                     }
-                    else if seatData.seatName == "A10" {
-                        let state: Bool = seatData.state
-                        if (state) {
-                            self.btnA10.isUserInteractionEnabled = false
-                            self.btnA10.backgroundColor = UIColor.blue
-                            self.btnA10.setTitleColor(UIColor.white, for: UIControlState.normal)
-                        }
+                }
+                else if seatData.seatName == "A10" {
+                    let state: Bool = seatData.state
+                    if (state) {
+                        self.btnA10.isUserInteractionEnabled = false
+                        self.btnA10.backgroundColor = UIColor.blue
+                        self.btnA10.setTitleColor(UIColor.white, for: UIControlState.normal)
                     }
-                    else if seatData.seatName == "B1" {
-                        let state: Bool = seatData.state
-                        if (state) {
-                            self.btnB1.isUserInteractionEnabled = false
-                            self.btnB1.backgroundColor = UIColor.blue
-                            self.btnB1.setTitleColor(UIColor.white, for: UIControlState.normal)
-                        }
+                }
+                else if seatData.seatName == "B1" {
+                    let state: Bool = seatData.state
+                    if (state) {
+                        self.btnB1.isUserInteractionEnabled = false
+                        self.btnB1.backgroundColor = UIColor.blue
+                        self.btnB1.setTitleColor(UIColor.white, for: UIControlState.normal)
                     }
-                    else if seatData.seatName == "B2" {
-                        let state: Bool = seatData.state
-                        if (state) {
-                            self.btnB2.isUserInteractionEnabled = false
-                            self.btnB2.backgroundColor = UIColor.blue
-                            self.btnB2.setTitleColor(UIColor.white, for: UIControlState.normal)
-                        }
+                }
+                else if seatData.seatName == "B2" {
+                    let state: Bool = seatData.state
+                    if (state) {
+                        self.btnB2.isUserInteractionEnabled = false
+                        self.btnB2.backgroundColor = UIColor.blue
+                        self.btnB2.setTitleColor(UIColor.white, for: UIControlState.normal)
                     }
-                    else if seatData.seatName == "B3" {
-                        let state: Bool = seatData.state
-                        if (state) {
-                            self.btnB3.isUserInteractionEnabled = false
-                            self.btnB3.backgroundColor = UIColor.blue
-                            self.btnB3.setTitleColor(UIColor.white, for: UIControlState.normal)
-                        }
+                }
+                else if seatData.seatName == "B3" {
+                    let state: Bool = seatData.state
+                    if (state) {
+                        self.btnB3.isUserInteractionEnabled = false
+                        self.btnB3.backgroundColor = UIColor.blue
+                        self.btnB3.setTitleColor(UIColor.white, for: UIControlState.normal)
                     }
-                    else if seatData.seatName == "B4" {
-                        let state: Bool = seatData.state
-                        if (state) {
-                            self.btnB4.isUserInteractionEnabled = false
-                            self.btnB4.backgroundColor = UIColor.blue
-                            self.btnB4.setTitleColor(UIColor.white, for: UIControlState.normal)
-                        }
+                }
+                else if seatData.seatName == "B4" {
+                    let state: Bool = seatData.state
+                    if (state) {
+                        self.btnB4.isUserInteractionEnabled = false
+                        self.btnB4.backgroundColor = UIColor.blue
+                        self.btnB4.setTitleColor(UIColor.white, for: UIControlState.normal)
                     }
-                    else if seatData.seatName == "B5" {
-                        let state: Bool = seatData.state
-                        if (state) {
-                            self.btnB5.isUserInteractionEnabled = false
-                            self.btnB5.backgroundColor = UIColor.blue
-                            self.btnB5.setTitleColor(UIColor.white, for: UIControlState.normal)
-                        }
+                }
+                else if seatData.seatName == "B5" {
+                    let state: Bool = seatData.state
+                    if (state) {
+                        self.btnB5.isUserInteractionEnabled = false
+                        self.btnB5.backgroundColor = UIColor.blue
+                        self.btnB5.setTitleColor(UIColor.white, for: UIControlState.normal)
                     }
-                    else if seatData.seatName == "B6" {
-                        let state: Bool = seatData.state
-                        if (state) {
-                            self.btnB6.isUserInteractionEnabled = false
-                            self.btnB6.backgroundColor = UIColor.blue
-                            self.btnB6.setTitleColor(UIColor.white, for: UIControlState.normal)
-                        }
+                }
+                else if seatData.seatName == "B6" {
+                    let state: Bool = seatData.state
+                    if (state) {
+                        self.btnB6.isUserInteractionEnabled = false
+                        self.btnB6.backgroundColor = UIColor.blue
+                        self.btnB6.setTitleColor(UIColor.white, for: UIControlState.normal)
                     }
-                    else if seatData.seatName == "B7" {
-                        let state: Bool = seatData.state
-                        if (state) {
-                            self.btnB7.isUserInteractionEnabled = false
-                            self.btnB7.backgroundColor = UIColor.blue
-                            self.btnB7.setTitleColor(UIColor.white, for: UIControlState.normal)
-                        }
+                }
+                else if seatData.seatName == "B7" {
+                    let state: Bool = seatData.state
+                    if (state) {
+                        self.btnB7.isUserInteractionEnabled = false
+                        self.btnB7.backgroundColor = UIColor.blue
+                        self.btnB7.setTitleColor(UIColor.white, for: UIControlState.normal)
                     }
-                    else if seatData.seatName == "B8" {
-                        let state: Bool = seatData.state
-                        if (state) {
-                            self.btnB8.isUserInteractionEnabled = false
-                            self.btnB8.backgroundColor = UIColor.blue
-                            self.btnB8.setTitleColor(UIColor.white, for: UIControlState.normal)
-                        }
+                }
+                else if seatData.seatName == "B8" {
+                    let state: Bool = seatData.state
+                    if (state) {
+                        self.btnB8.isUserInteractionEnabled = false
+                        self.btnB8.backgroundColor = UIColor.blue
+                        self.btnB8.setTitleColor(UIColor.white, for: UIControlState.normal)
                     }
-                    else if seatData.seatName == "B9" {
-                        let state: Bool = seatData.state
-                        if (state) {
-                            self.btnB9.isUserInteractionEnabled = false
-                            self.btnB9.backgroundColor = UIColor.blue
-                            self.btnB9.setTitleColor(UIColor.white, for: UIControlState.normal)
-                        }
+                }
+                else if seatData.seatName == "B9" {
+                    let state: Bool = seatData.state
+                    if (state) {
+                        self.btnB9.isUserInteractionEnabled = false
+                        self.btnB9.backgroundColor = UIColor.blue
+                        self.btnB9.setTitleColor(UIColor.white, for: UIControlState.normal)
                     }
-                    else if seatData.seatName == "B10" {
-                        let state: Bool = seatData.state
-                        if (state) {
-                            self.btnB10.isUserInteractionEnabled = false
-                            self.btnB10.backgroundColor = UIColor.blue
-                            self.btnB10.setTitleColor(UIColor.white, for: UIControlState.normal)
-                        }
+                }
+                else if seatData.seatName == "B10" {
+                    let state: Bool = seatData.state
+                    if (state) {
+                        self.btnB10.isUserInteractionEnabled = false
+                        self.btnB10.backgroundColor = UIColor.blue
+                        self.btnB10.setTitleColor(UIColor.white, for: UIControlState.normal)
                     }
-                    else if seatData.seatName == "C1" {
-                        let state: Bool = seatData.state
-                        if (state) {
-                            self.btnC1.isUserInteractionEnabled = false
-                            self.btnC1.backgroundColor = UIColor.blue
-                            self.btnC1.setTitleColor(UIColor.white, for: UIControlState.normal)
-                        }
+                }
+                else if seatData.seatName == "C1" {
+                    let state: Bool = seatData.state
+                    if (state) {
+                        self.btnC1.isUserInteractionEnabled = false
+                        self.btnC1.backgroundColor = UIColor.blue
+                        self.btnC1.setTitleColor(UIColor.white, for: UIControlState.normal)
                     }
-                    else if seatData.seatName == "C2" {
-                        let state: Bool = seatData.state
-                        if (state) {
-                            self.btnC2.isUserInteractionEnabled = false
-                            self.btnC2.backgroundColor = UIColor.blue
-                            self.btnC2.setTitleColor(UIColor.white, for: UIControlState.normal)
-                        }
+                }
+                else if seatData.seatName == "C2" {
+                    let state: Bool = seatData.state
+                    if (state) {
+                        self.btnC2.isUserInteractionEnabled = false
+                        self.btnC2.backgroundColor = UIColor.blue
+                        self.btnC2.setTitleColor(UIColor.white, for: UIControlState.normal)
                     }
-                    else if seatData.seatName == "C3" {
-                        let state: Bool = seatData.state
-                        if (state) {
-                            self.btnC3.isUserInteractionEnabled = false
-                            self.btnC3.backgroundColor = UIColor.blue
-                            self.btnC3.setTitleColor(UIColor.white, for: UIControlState.normal)
-                        }
+                }
+                else if seatData.seatName == "C3" {
+                    let state: Bool = seatData.state
+                    if (state) {
+                        self.btnC3.isUserInteractionEnabled = false
+                        self.btnC3.backgroundColor = UIColor.blue
+                        self.btnC3.setTitleColor(UIColor.white, for: UIControlState.normal)
                     }
-                    else if seatData.seatName == "C4" {
-                        let state: Bool = seatData.state
-                        if (state) {
-                            self.btnC4.isUserInteractionEnabled = false
-                            self.btnC4.backgroundColor = UIColor.blue
-                            self.btnC4.setTitleColor(UIColor.white, for: UIControlState.normal)
-                        }
+                }
+                else if seatData.seatName == "C4" {
+                    let state: Bool = seatData.state
+                    if (state) {
+                        self.btnC4.isUserInteractionEnabled = false
+                        self.btnC4.backgroundColor = UIColor.blue
+                        self.btnC4.setTitleColor(UIColor.white, for: UIControlState.normal)
                     }
-                    else if seatData.seatName == "C5" {
-                        let state: Bool = seatData.state
-                        if (state) {
-                            self.btnC5.isUserInteractionEnabled = false
-                            self.btnC5.backgroundColor = UIColor.blue
-                            self.btnC5.setTitleColor(UIColor.white, for: UIControlState.normal)
-                        }
+                }
+                else if seatData.seatName == "C5" {
+                    let state: Bool = seatData.state
+                    if (state) {
+                        self.btnC5.isUserInteractionEnabled = false
+                        self.btnC5.backgroundColor = UIColor.blue
+                        self.btnC5.setTitleColor(UIColor.white, for: UIControlState.normal)
                     }
-                    else if seatData.seatName == "C6" {
-                        let state: Bool = seatData.state
-                        if (state) {
-                            self.btnC6.isUserInteractionEnabled = false
-                            self.btnC6.backgroundColor = UIColor.blue
-                            self.btnC6.setTitleColor(UIColor.white, for: UIControlState.normal)
-                        }
+                }
+                else if seatData.seatName == "C6" {
+                    let state: Bool = seatData.state
+                    if (state) {
+                        self.btnC6.isUserInteractionEnabled = false
+                        self.btnC6.backgroundColor = UIColor.blue
+                        self.btnC6.setTitleColor(UIColor.white, for: UIControlState.normal)
                     }
-                    else if seatData.seatName == "C7" {
-                        let state: Bool = seatData.state
-                        if (state) {
-                            self.btnC7.isUserInteractionEnabled = false
-                            self.btnC7.backgroundColor = UIColor.blue
-                            self.btnC7.setTitleColor(UIColor.white, for: UIControlState.normal)
-                        }
+                }
+                else if seatData.seatName == "C7" {
+                    let state: Bool = seatData.state
+                    if (state) {
+                        self.btnC7.isUserInteractionEnabled = false
+                        self.btnC7.backgroundColor = UIColor.blue
+                        self.btnC7.setTitleColor(UIColor.white, for: UIControlState.normal)
                     }
-                    else if seatData.seatName == "C8" {
-                        let state: Bool = seatData.state
-                        if (state) {
-                            self.btnC8.isUserInteractionEnabled = false
-                            self.btnC8.backgroundColor = UIColor.blue
-                            self.btnC8.setTitleColor(UIColor.white, for: UIControlState.normal)
-                        }
+                }
+                else if seatData.seatName == "C8" {
+                    let state: Bool = seatData.state
+                    if (state) {
+                        self.btnC8.isUserInteractionEnabled = false
+                        self.btnC8.backgroundColor = UIColor.blue
+                        self.btnC8.setTitleColor(UIColor.white, for: UIControlState.normal)
                     }
-                    else if seatData.seatName == "C9" {
-                        let state: Bool = seatData.state
-                        if (state) {
-                            self.btnC9.isUserInteractionEnabled = false
-                            self.btnC9.backgroundColor = UIColor.blue
-                            self.btnC9.setTitleColor(UIColor.white, for: UIControlState.normal)
-                        }
+                }
+                else if seatData.seatName == "C9" {
+                    let state: Bool = seatData.state
+                    if (state) {
+                        self.btnC9.isUserInteractionEnabled = false
+                        self.btnC9.backgroundColor = UIColor.blue
+                        self.btnC9.setTitleColor(UIColor.white, for: UIControlState.normal)
                     }
-                    else if seatData.seatName == "C10" {
-                        let state: Bool = seatData.state
-                        if (state) {
-                            self.btnC10.isUserInteractionEnabled = false
-                            self.btnC10.backgroundColor = UIColor.blue
-                            self.btnC10.setTitleColor(UIColor.white, for: UIControlState.normal)
-                        }
+                }
+                else if seatData.seatName == "C10" {
+                    let state: Bool = seatData.state
+                    if (state) {
+                        self.btnC10.isUserInteractionEnabled = false
+                        self.btnC10.backgroundColor = UIColor.blue
+                        self.btnC10.setTitleColor(UIColor.white, for: UIControlState.normal)
                     }
-                    
                 }
                 
-            })
+            }
+            
+        })
     }
     
     func showProgress() {
@@ -959,8 +960,7 @@ class LuaChonGheViewController: UIViewController {
                 else
                 {
                     //save places into list
-                    listPlaces.append("C4");
-                    
+                    listPlaces.append("C4");                    
                     ticket -= 1
                     self.btnC4.backgroundColor = UIColor.green
                     self.btnC4.setTitleColor(UIColor.white, for: UIControlState.normal)
@@ -1123,70 +1123,70 @@ class LuaChonGheViewController: UIViewController {
             showAlertDialog(message: "Bạn chọn chưa đủ số ghế. Vui lòng chọn thêm")
         }
         else {
-            //var count: Int = 0
-            //var statePlaces: Bool = true
-            //check xem ghế đó đã có ai book chưa
+            
             for place in listPlaces {
                 //save into movie
                 let dataUpdates = ["state": true, "bookBy": getUid()] as [String: AnyObject]
-                //mDatabase.child("movies").child(movieDetail.movieType).child(movieDetail.movieId).child("showTime").child(time).child("seat").child(place).updateChildValues(dataUpdates)
-                mDatabase.child("movies").child("PhimDangChieu").child("1").child("showTime").child("850").child("seat").child("A5").updateChildValues(dataUpdates)            }
+               
+                //mDatabase.child("movies").child("PhimDangChieu").child(movieDetail.movieId).child("showTime").child(time).child("seat").child(place).updateChildValues(dataUpdates)
+                mDatabase.child("movies").child("PhimDangChieu").child("1").child("showTime").child("850").child("seat").child("A5").updateChildValues(dataUpdates)
+            }
+                
+                //update balance
+                let dataBalance = ["balance": Int64(userInfo.balance) - money]
+                mDatabase.child("Acount").child(getUid()).updateChildValues(dataBalance)
+                //save into users
+                let dataFilms = [
+                    "movieId": movieDetail.movieId,
+                    "movieType": movieDetail.movieType,
+                    "price": money,
+                    "seat": listPlaces,
+                    "showTime": time,
+                    "timestamp": getTodayString()
+                    ] as [String: AnyObject]
+                let key = mDatabase.child("Acount").child(getUid()).child("booked").childByAutoId().key
+                
+                mDatabase.child("Acount").child(getUid()).child("booked").child(key).updateChildValues(dataFilms)
+                
+                let alertView = UIAlertController(title: "Thông Báo", message: "Đặt ghế thành công", preferredStyle: .alert)
+                let action = UIAlertAction(title: "Ok", style: .default, handler: { (action: UIAlertAction) in
+                    self.navigationController?.popToRootViewController(animated: true)
+                })
+                alertView.addAction(action)
+                self.present(alertView, animated: true, completion: nil)
+            }
+        }
+        
+        //get current day
+        func getTodayString() -> String {
+            let date = Date()
+            let calendar = Calendar.current
             
-            //update balance
-            let dataBalance = ["balance": Int64(userInfo.balance) - money]
-            mDatabase.child("Acount").child(getUid()).updateChildValues(dataBalance)
-            //save into users
-            let dataFilms = [
-                "movieId": movieDetail.movieId,
-                "movieType": movieDetail.movieType,
-                "price": money,
-                "seat": listPlaces,
-                "showTime": time,
-                "timestamp": getTodayString()
-                ] as [String: AnyObject]
-            let key = mDatabase.child("Acount").child(getUid()).child("booked").childByAutoId().key
+            let components = calendar.dateComponents([.year, .month, .day, .hour, .minute, .second], from: date)
             
-            mDatabase.child("Acount").child(getUid()).child("booked").child(key).updateChildValues(dataFilms)
+            let year = components.year
+            let month = components.month
+            let day = components.day
+            let hour = components.hour
+            let minute = components.minute
+            let second = components.second
             
-            let alertView = UIAlertController(title: "Thông Báo", message: "Đặt ghế thành công", preferredStyle: .alert)
-            let action = UIAlertAction(title: "Ok", style: .default, handler: { (action: UIAlertAction) in
-                self.navigationController?.popToRootViewController(animated: true)
-            })
+            let today_string = String(year!) + "-" + String(month!) + "-" + String(day!) + " " + String(hour!)  + ":" + String(minute!) + ":" +  String(second!)
+            
+            return today_string
+        }
+        
+        //show alertView
+        func showAlertDialog(message: String) {
+            let alertView = UIAlertController(title: "Thông Báo", message: message, preferredStyle: .alert)
+            let action = UIAlertAction(title: "Chấp nhận", style: .default, handler: nil)
             alertView.addAction(action)
             self.present(alertView, animated: true, completion: nil)
         }
-    }
-    
-    //get current day
-    func getTodayString() -> String {
-        let date = Date()
-        let calendar = Calendar.current
         
-        let components = calendar.dateComponents([.year, .month, .day, .hour, .minute, .second], from: date)
-        
-        let year = components.year
-        let month = components.month
-        let day = components.day
-        let hour = components.hour
-        let minute = components.minute
-        let second = components.second
-        
-        let today_string = String(year!) + "-" + String(month!) + "-" + String(day!) + " " + String(hour!)  + ":" + String(minute!) + ":" +  String(second!)
-        
-        return today_string
-    }
-    
-    //show alertView
-    func showAlertDialog(message: String) {
-        let alertView = UIAlertController(title: "Thông Báo", message: message, preferredStyle: .alert)
-        let action = UIAlertAction(title: "Ok", style: .default, handler: nil)
-        alertView.addAction(action)
-        self.present(alertView, animated: true, completion: nil)
-    }
-    
-    //get currentId
-    func getUid() -> String {
-        return (Auth.auth().currentUser?.uid)!;
-    }
+        //get currentId
+        func getUid() -> String {
+            return (Auth.auth().currentUser?.uid)!;
+        }
 }
 

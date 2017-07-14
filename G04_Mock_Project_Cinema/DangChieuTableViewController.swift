@@ -24,7 +24,7 @@ extension DangChieuTableViewController: UISearchResultsUpdating {
 }
 
 class DangChieuTableViewController: UITableViewController {
-
+    
     var mDatabase: DatabaseReference!
     var movies = [MovieDetail]()
     var searchFilms = [MovieDetail]()
@@ -36,10 +36,10 @@ class DangChieuTableViewController: UITableViewController {
         
         mDatabase = Database.database().reference()
         //
-         self.clearsSelectionOnViewWillAppear = false
+        self.clearsSelectionOnViewWillAppear = false
         loadData()
         //register
-        tableView.register(UINib(nibName: "CustomTableViewCell", bundle: nil), forCellReuseIdentifier: "FilmRow")
+        tableView.register(UINib(nibName: "CustomTableViewCell", bundle: nil), forCellReuseIdentifier: "MovieRowCell")
         //Tuy chon tim kiem
         searchController.searchResultsUpdater = self
         searchController.searchBar.delegate = self
@@ -49,7 +49,7 @@ class DangChieuTableViewController: UITableViewController {
     }
     
     func loadData() {
-            LayPhimDangChieu()
+        LayPhimDangChieu()
     }
     
     //Xem profile của người dùng
@@ -60,7 +60,7 @@ class DangChieuTableViewController: UITableViewController {
         } else {
             let srcSignIn = self.storyboard?.instantiateViewController(withIdentifier: "logInId") as! LogInViewController
             present(srcSignIn, animated: true, completion: nil)
-            }
+        }
     }
     
     //Hiện tiến trình đợi
@@ -143,7 +143,7 @@ class DangChieuTableViewController: UITableViewController {
     
     //load dữ liệu lên cell
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "FilmRow", for: indexPath) as! CustomTableViewCell
+        let cell = tableView.dequeueReusableCell(withIdentifier: "MovieRowCell", for: indexPath) as! CustomTableViewCell
         let movieDetail: MovieDetail
         if (searchController.isActive && searchController.searchBar.text != "") {
             movieDetail = searchFilms[indexPath.row]
